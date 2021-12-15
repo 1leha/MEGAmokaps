@@ -145,27 +145,20 @@ body {
   padding: 42px 0 102px 0;
 }
 
-.item-center {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 100%;
-          flex: 1 1 100%;
-  position: relative;
-  overflow-y: auto;
-}
-
 .search {
   width: 246px;
   height: 40px;
   margin-left: -22px;
   margin-bottom: 32px;
   position: relative;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 8px;
   /* identical to box height */
 }
 
 .search input {
   width: 100%;
+  padding-right: 50px;
   padding-left: 53px;
   font-style: normal;
   font-weight: normal;
@@ -175,7 +168,7 @@ body {
 }
 
 .search input::-webkit-input-placeholder {
-  color: #0E1C32;
+  color: #0e1c32;
 }
 
 .search button {
@@ -192,20 +185,63 @@ body {
   content: url("../img/leftside/lupa.svg");
 }
 
+.item-center {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  position: relative;
+  overflow-y: auto;
+}
+
+.item-center::-webkit-scrollbar {
+  background-color: #0e1c32;
+  width: 5px;
+}
+
+.item-center::-webkit-scrollbar-thumb {
+  background-color: #e7f0ff;
+  border-radius: 3px;
+}
+
 .menu {
   color: white;
+  padding: 0 32px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .menu-item {
   font-size: 16px;
-  padding: 0px 0px 17px 32px;
+  padding: 0px 0px 17px 0px;
 }
 
 .menu-item__title {
+  cursor: pointer;
+  list-style: none;
   font-weight: 600;
+  position: relative;
+}
+
+.menu-item__title::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url("../img/leftside/arrow down.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .menu-item__subtitle {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   padding-bottom: 8px;
 }
 
@@ -218,6 +254,36 @@ body {
 }
 
 .menu-item__link {
+  text-decoration: none;
+  color: white;
+}
+
+.menu-item[open] .menu-item {
+  font-size: 16px;
+  padding: 0px 0px 17px 0px;
+}
+
+.menu-item[open] .menu-item__title::after {
+  content: "";
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.menu-item[open] .menu-item__subtitle {
+  padding-bottom: 8px;
+}
+
+.menu-item[open] .menu-item__subtitle:first-child {
+  padding-top: 17px;
+}
+
+.menu-item[open] .menu-item__subtitle:last-child {
+  padding-bottom: 30px;
+}
+
+.menu-item[open] .menu-item__link {
   text-decoration: none;
   color: white;
 }
