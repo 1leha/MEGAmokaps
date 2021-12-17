@@ -86,11 +86,14 @@ h6 {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .wrapper {
-  background-color: white;
+  border: black dashed 2px;
+  background-image: url("/img/bg/bigLogo_bg.svg");
+  background-repeat: no-repeat;
+  background-position: 0px, 800px;
   height: 100%;
 }
 
@@ -107,8 +110,6 @@ body {
 
 .page-row__left {
   min-width: 240px;
-  background-color: #0e1c32;
-  overflow: hidden;
 }
 
 .page-row__right {
@@ -122,7 +123,8 @@ body {
   height: 100%;
 }
 
-.left__content, .right__content {
+.left__content,
+.right__content {
   position: fixed;
   height: 100%;
   min-width: 240px;
@@ -138,6 +140,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: #0e1c32;
 }
 
 .item-top {
@@ -290,4 +293,164 @@ body {
 
 .buttons {
   color: white;
+}
+
+.page-row {
+  margin: 0, auto;
+}
+
+.center__content {
+  min-width: 1200px;
+  padding: 32px 140px;
+  border: 1px solid black;
+}
+
+.item__title {
+  font-size: 48px;
+  line-height: 59px;
+  color: #0e1c32;
+  margin-bottom: 36px;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (4)[1fr];
+      grid-template-rows: repeat(1fr, 4);
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.card {
+  width: 288px;
+  height: 356px;
+  -webkit-box-shadow: 0px 8px 24px -6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 8px 24px -6px rgba(0, 0, 0, 0.16);
+  -webkit-filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.4));
+          filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.4));
+  border-radius: 11px;
+  overflow: hidden;
+}
+
+.card__container {
+  padding: 12px;
+  line-height: 20px;
+}
+
+.card__image {
+  width: 265px;
+  height: 265px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.card__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card__info {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 80%;
+          flex: 0 0 80%;
+}
+
+.card__checkbox-label {
+  display: inline-block;
+  padding-right: 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.card__checkbox {
+  width: 16px;
+  height: 16px;
+  background: #0e1c32;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.card__checkbox-sublabel {
+  font-size: 12px;
+}
+
+.card__download {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
+  position: relative;
+  position: relative;
+}
+
+.card:hover {
+  background-color: #e7f0ff;
+}
+
+.info__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.download-button {
+  width: 64px;
+  height: 36px;
+  background: #0e1c32;
+  border: 1px solid #000000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px 0px 0px 10px;
+  position: absolute;
+  -webkit-transform: translate(25px, 0px);
+          transform: translate(25px, 0px);
+}
+
+.download-button__image {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(14px, -50%);
+          transform: translate(14px, -50%);
+}
+
+.settings {
+  position: relative;
+}
+
+.settings__link {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: white;
+  left: 6px;
+  bottom: 6px;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.settings__img {
+  width: 60%;
 }

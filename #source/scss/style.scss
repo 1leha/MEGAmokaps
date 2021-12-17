@@ -1,14 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
 @import "_0style";
 
-body{
-    font-family: 'Montserrat', sans-serif;
+body {
+    font-family: "Montserrat", sans-serif;
 }
 .wrapper {
-    background-color: rgb(255, 255, 255);
+    border: black dashed 2px;
+
+    background-image: url("/img/bg/bigLogo_bg.svg");
+    background-repeat: no-repeat;
+    background-position: 0px, 800px;
+    //background-color: rgb(255, 255, 255);
     height: 100%;
 }
 .button {
+    //color: aqua;
 }
 .page-row {
     display: flex;
@@ -18,15 +24,13 @@ body{
     //border: black dashed 2px;
 
     &__left {
-
         min-width: 240px;
         //background-color: #55719e;
-        background-color: #0e1c32;
-overflow: hidden;
+        //background-color: #0e1c32;
+        //overflow: hidden;
     }
     &__right {
         min-width: 240px;
-
     }
 
     &__center {
@@ -36,7 +40,8 @@ overflow: hidden;
         //background-color: rgb(241, 241, 241);
     }
 }
-.left__content, .right__content {
+.left__content,
+.right__content {
     position: fixed;
     height: 100%;
     min-width: 240px;
@@ -44,6 +49,65 @@ overflow: hidden;
     //border: 1px solid rgb(0, 0, 0);
 }
 
-
-
 @import "_section_left";
+
+.page-row {
+    margin: 0, auto;
+
+    // .page-row__center
+
+    &__center {
+    }
+}
+.center {
+    // .center__content
+
+    &__content {
+        min-width: 1200px;
+        padding: 32px 140px;
+        border: 1px solid rgb(0, 0, 0);
+    }
+}
+.location {
+    // .location__list
+
+    &__list {
+    }
+}
+.list {
+    // .list__item
+
+    &__item {
+    }
+}
+.item {
+    // .item__title
+
+    &__title {
+        font-size: 48px;
+        line-height: 59px;
+        color: #0e1c32;
+        margin-bottom: 36px;
+    }
+
+    // .item__grid
+
+    &__grid {
+    }
+}
+.title {
+}
+.grid {
+    // .grid__item
+
+    &__item {
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-rows: repeat(1fr, 4);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+@import "_card";
