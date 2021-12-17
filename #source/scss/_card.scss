@@ -1,0 +1,135 @@
+.card {
+	//border: solid #000;
+	width: 288px;
+	height: 356px;
+	box-shadow: 0px 8px 24px -6px rgba(0, 0, 0, 0.16);
+	filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.4));
+	border-radius: 11px;
+	overflow: hidden;
+
+	// Контейнер для всего контента карточки
+	&__container {
+		padding: 12px;
+		line-height: 20px;
+	}
+
+	// .card__image
+	&__image {
+		width: 265px;
+		height: 265px;
+		border-radius: 10px;
+		overflow: hidden;
+		//border: hotpink solid;
+		margin-bottom: 16px;
+		position: relative;
+	}
+
+	// .card__bottom
+
+	&__bottom {
+		display: flex;
+	}
+
+	// .card__info
+
+	&__info {
+		//border: hotpink solid;
+
+		flex: 0 0 80%;
+	}
+
+	// .card__checkbox-label
+
+	&__checkbox-label {
+		display: inline-block;
+		padding-right: 12px;
+		font-size: 14px;
+		font-weight: 600;
+	}
+
+	// .card__checkbox
+
+	&__checkbox {
+		width: 16px;
+		height: 16px;
+		background: #0e1c32;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		border-radius: 2px;
+		align-self: center;
+	}
+
+	// .card__checkbox-sublabel
+
+	&__checkbox-sublabel {
+		font-size: 12px;
+
+		//border: hotpink solid;
+	}
+
+	// .card__download
+
+	&__download {
+		flex: 0 0 20%;
+		position: relative;
+		//border: hotpink solid;
+		position: relative;
+	}
+
+	&:hover {
+		background-color: #e7f0ff;
+		//color: aqua;
+	}
+}
+.info {
+	// .info__checkbox
+
+	&__wrapper {
+		//border: hotpink solid;
+		display: flex;
+		justify-content: start;
+		align-content: center;
+	}
+}
+.download-button {
+	width: 64px;
+	height: 36px;
+	background: #0e1c32;
+	border: 1px solid #000000;
+	box-sizing: border-box;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 10px 0px 0px 10px;
+	position: absolute;
+	transform: translate(25px, 0px);
+
+	// .download-button__image
+	&__image {
+		position: absolute;
+		top: 50%;
+		transform: translate(14px, -50%);
+	}
+}
+.settings {
+	position: relative;
+
+	// .settings__link
+
+	&__link {
+		position: absolute;
+		width: 24px;
+		height: 24px;
+		border-radius: 50%;
+		background-color: rgb(255, 255, 255);
+		left: 6px;
+		bottom: 6px;
+		z-index: 2;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	// .settings__img
+
+	&__img {
+		width: 60%;
+	}
+}
