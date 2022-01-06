@@ -276,7 +276,9 @@ body {
 }
 
 .location {
-  max-width: 1200px;
+  max-width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin: 0 auto;
 }
 
@@ -365,6 +367,7 @@ body {
 }
 
 .card__checkbox {
+  cursor: pointer;
   width: 16px;
   height: 16px;
   background: #0e1c32;
@@ -389,6 +392,10 @@ body {
 }
 
 .card:hover {
+  background-color: #e7f0ff;
+}
+
+.card:focus {
   background-color: #e7f0ff;
 }
 

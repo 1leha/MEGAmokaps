@@ -51,6 +51,7 @@
 	// .card__checkbox
 
 	&__checkbox {
+		cursor: pointer;
 		width: 16px;
 		height: 16px;
 		background: #0e1c32;
@@ -77,6 +78,10 @@
 	}
 
 	&:hover {
+		background-color: #e7f0ff;
+		//color: aqua;
+	}
+	&:focus {
 		background-color: #e7f0ff;
 		//color: aqua;
 	}
