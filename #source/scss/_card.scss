@@ -6,6 +6,7 @@
 	filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.4));
 	border-radius: 11px;
 	overflow: hidden;
+	background-color: white;
 
 	// Контейнер для всего контента карточки
 	&__container {
@@ -26,7 +27,7 @@
 
 	// .card__bottom
 
-	&__bottom {
+	&__footer {
 		display: flex;
 	}
 
