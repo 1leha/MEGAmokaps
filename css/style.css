@@ -399,6 +399,10 @@ body {
   background-color: #c7cedb;
 }
 
+.page-row__center {
+  padding-bottom: 30px;
+}
+
 .center-content {
   width: 100%;
   padding: 0 30px;
@@ -413,9 +417,17 @@ body {
 
 .location__item {
   margin-top: 32px;
+  padding-bottom: 32px;
 }
 
 .title {
+  font-size: 36px;
+  line-height: 40px;
+  color: #0e1c32;
+  margin-bottom: 36px;
+}
+
+.section-title {
   font-size: 48px;
   line-height: 59px;
   color: #0e1c32;

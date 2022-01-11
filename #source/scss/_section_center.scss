@@ -2,6 +2,7 @@
     // .page-row__center
 
     &__center {
+        padding-bottom: 30px;
     }
 }
 .center-content {
@@ -20,10 +21,19 @@
 
     &__item {
         margin-top: 32px;
+        padding-bottom: 32px;
     }
 }
 
 .title {
+    // border: 1px solid rgb(0, 0, 0);
+    font-size: 36px;
+    line-height: 40px;
+    color: #0e1c32;
+    margin-bottom: 36px;
+}
+
+.section-title {
     // border: 1px solid rgb(0, 0, 0);
     font-size: 48px;
     line-height: 59px;
