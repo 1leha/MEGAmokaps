@@ -69,15 +69,51 @@
     // background-color: rgb(161, 144, 238);
     outline: burlywood 0px solid;
 }
+.menu > .conteiner {
+    padding-left: 24px;
+    padding-right: 24px;
+
+    color: var(--main-color);
+}
 
 .accardeon {
     &__item {
         // outline: rgb(0, 0, 0) 1px solid;
         margin-bottom: 30px;
+        position: relative;
+        &::after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            width: 191px;
+            height: 1px;
+            bottom: -15px;
+            background: linear-gradient(270deg, rgba(255, 255, 255, 0.1) -5.73%, rgba(255, 255, 255, 0) 97.39%);
+            // background-color: red;
+        }
+    }
+    &__item--active {
+        // outline: rgb(0, 0, 0) 1px solid;
+        margin-bottom: 30px;
+        position: relative;
+
+        &::after {
+            content: none;
+        }
     }
 
     &__item--active &__triger {
         background-color: rgba($color: #fff, $alpha: 0.2);
+
+        &::before {
+            content: "";
+            top: 50%;
+            transform: translate(-20px);
+            transform-origin: 50% 10%;
+
+            transform: rotate(180deg);
+            transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+        }
     }
 
     &__item--active &__content {
@@ -87,10 +123,29 @@
     &__triger {
         cursor: pointer;
         display: block;
+        padding: 0 8px;
 
         font-weight: 600;
         font-size: 16px;
         line-height: 1.25;
+
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 8px;
+            height: 5px;
+            // background-color: #fff;
+            background-image: url("../../img/leftside/arrow-down.svg");
+            background-repeat: no-repeat;
+            right: 8px;
+            top: 50%;
+            transform-origin: 50% 10%;
+            transform: translate(0, -50%);
+            transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+        }
     }
     &__triger--active {
         display: block;
@@ -98,15 +153,9 @@
     }
 
     &__content {
+        padding: 0 8px;
         display: none;
     }
-
-    // &__radio:checked ~ &__triger {
-    //     background-color: rgba($color: #fff, $alpha: 0.2);
-    // }
-    // &__radio:checked ~ &__content {
-    //     display: block;
-    // }
 }
 
 .accardeon-submenu {

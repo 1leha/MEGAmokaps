@@ -147,12 +147,6 @@ body {
   margin: 0, auto;
 }
 
-.menu > .conteiner {
-  padding-left: 32px;
-  padding-right: 32px;
-  color: azure;
-}
-
 .left-row {
   height: 100%;
   display: -webkit-box;
@@ -232,12 +226,52 @@ body {
   outline: burlywood 0px solid;
 }
 
+.menu > .conteiner {
+  padding-left: 24px;
+  padding-right: 24px;
+  color: var(--main-color);
+}
+
 .accardeon__item {
   margin-bottom: 30px;
+  position: relative;
+}
+
+.accardeon__item::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 191px;
+  height: 1px;
+  bottom: -15px;
+  background: -webkit-gradient(linear, right top, left top, color-stop(-5.73%, rgba(255, 255, 255, 0.1)), color-stop(97.39%, rgba(255, 255, 255, 0)));
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0.1) -5.73%, rgba(255, 255, 255, 0) 97.39%);
+}
+
+.accardeon__item--active {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.accardeon__item--active::after {
+  content: none;
 }
 
 .accardeon__item--active .accardeon__triger {
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+.accardeon__item--active .accardeon__triger::before {
+  content: "";
+  top: 50%;
+  -webkit-transform: translate(-20px);
+          transform: translate(-20px);
+  -webkit-transform-origin: 50% 10%;
+          transform-origin: 50% 10%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
 }
 
 .accardeon__item--active .accardeon__content {
@@ -247,9 +281,29 @@ body {
 .accardeon__triger {
   cursor: pointer;
   display: block;
+  padding: 0 8px;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.25;
+  position: relative;
+}
+
+.accardeon__triger::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 8px;
+  height: 5px;
+  background-image: url("../../img/leftside/arrow-down.svg");
+  background-repeat: no-repeat;
+  right: 8px;
+  top: 50%;
+  -webkit-transform-origin: 50% 10%;
+          transform-origin: 50% 10%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  -webkit-transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
 }
 
 .accardeon__triger--active {
@@ -258,6 +312,7 @@ body {
 }
 
 .accardeon__content {
+  padding: 0 8px;
   display: none;
 }
 
