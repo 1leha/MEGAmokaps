@@ -1,8 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
 @import "_0style";
 
+:root {
+    --main-font: "Montserrat", sans-serif;
+    --main-color: #fff;
+    --brand-color: #0e1c32;
+}
+
 body {
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--main-font);
 }
 .wrapper {
     //border: black dashed 2px;
@@ -17,7 +23,7 @@ body {
     //background-color: rgb(87, 13, 13);
     width: 720px;
     height: 720px;
-    background-image: url("/img/bg/bigLogo_bg.svg");
+    background-image: url("../../img/bg/bigLogo_bg.svg");
     background-repeat: no-repeat;
     background-position: 0px 0px;
     z-index: 0;
@@ -52,12 +58,18 @@ body {
 .right__content {
     position: fixed;
     height: 100%;
-    min-width: 240px;
+    width: 240px;
+
     margin: 0, auto;
     //border: 1px solid rgb(0, 0, 0);
+}
+.menu > .conteiner {
+    padding-left: 32px;
+    padding-right: 32px;
+
+    color: azure;
 }
 
 @import "_section_left";
 @import "_section_center";
-
 @import "_card";

@@ -27,34 +27,105 @@
               </a>
             </div>
             <!-- Форма поиска -->
-            <div class="search">
+            <div class="left-row__item search">
               <form action="#" method="get">
-                <input type="text" placeholder="Поиск" />
-                <button type="submit"></button>
+                <input class="search__text" type="text" placeholder="Поиск" />
+                <button class="search__button" type="button"></button>
               </form>
             </div>
             <!-- Центральный элемент сайдбара (меню) -->
             <div class="left-row__item item-center">
               <!-- Меню -->
               <nav class="menu">
-                <!-- Меню Харьков -->
+                <div class="conteiner">
+                  <ul class="menu__list accardeon">
 
-                <!-- Меню Киев -->
+                    <!-- Меню Харьков -->
+                    <li class="accardeon__item accardeon__item--active">
+                      <div class="accardeon__triger">Харьков</div>
+                      <div class="accardeon__content">
+                        <ul class="accardeon-submenu">
+                          <li class="accardeon-submenu__item">
+                            <a class="accardeon-submenu__link" href="">Метро</a>
+                          </li>
+                          <li class="accardeon-submenu__item">
+                            <a class="accardeon-submenu__link" href="">Наружка</a>
+                          </li>
+                          <li class="accardeon-submenu__item">
+                            <a class="accardeon-submenu__link" href="">Аэропорт</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
 
-                <!-- Меню Одесса -->
+                    <!-- Меню Киев -->
+                    <li class="accardeon__item">
+                      <div class="accardeon__triger">Киев</div>
+                      <div class="accardeon__content">
+                        <ul class="accardeon-submenu">
+                          <li class="accardeon-submenu__item">
+                            <a class="accardeon-submenu__link" href="">Метро</a>
+                          </li>
+                          <li class="accardeon-submenu__item">
+                            <a class="accardeon-submenu__link" href="">Наружка</a>
+                          </li>
+                          <li class="accardeon-submenu__item">
+                            <a class="accardeon-submenu__link" href="">Аэропорт</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
 
-                <!-- Меню Львов -->
+                    <!-- Меню Одесса -->
+                    <li class="accardeon__item">
+                      <div class="accardeon__triger">Одесса</div>
+                      <div class="accardeon__content">
+                        <ul class="accardeon-submenu">
+                          <li class="accardeon-submenu__item">
+                            <a class="accardeon-submenu__link" href="">Метро</a>
+                          </li>
+                          <li class="accardeon-submenu__item">
+                            <a class="accardeon-submenu__link" href="">Наружка</a>
+                          </li>
+                          <li class="accardeon-submenu__item">
+                            <a class="accardeon-submenu__link" href="">Аэропорт</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
 
-                <!-- Меню Запорожье -->
+                    <!-- Меню Львов -->
+                    <li class="accardeon__item">
+                      <div class="accardeon__triger">Львов</div>
+                      <div class="accardeon__content">
+                        <ul class="accardeon-submenu">
+                          <li class="accardeon-submenu__item">
+                            <a class="accardeon-submenu__link" href="">Метро</a>
+                          </li>
+                          <li class="accardeon-submenu__item">
+                            <a class="accardeon-submenu__link" href="">Наружка</a>
+                          </li>
+                          <li class="accardeon-submenu__item">
+                            <a class="accardeon-submenu__link" href="">Аэропорт</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
 
-                <!-- Меню Днепр -->
+                  </ul>
 
-                <!-- Меню Транспорт -->
 
-                <!-- Меню Рендер -->
 
-                <!-- Меню Накрышники -->
+                  <!-- Меню Запорожье -->
 
+                  <!-- Меню Днепр -->
+
+                  <!-- Меню Транспорт -->
+
+                  <!-- Меню Рендер -->
+
+                  <!-- Меню Накрышники -->
+                </div>
               </nav>
             </div>
             <!-- Нижний элемент сайдбара (кнопки) -->
@@ -307,6 +378,7 @@
       </div>
     </div>
   </div>
+  <script src="./js/accordeon.js"></script>
 </body>
 
 </html>

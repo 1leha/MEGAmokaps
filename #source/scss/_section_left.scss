@@ -6,38 +6,34 @@
     background-color: #0e1c32;
 
     // .left-row__item
-
-    &__item {
-    }
 }
+
 .item-header {
     margin: 0 auto;
-    padding: 42px 0 102px 0;
+    margin-top: 42px;
 }
-.logo {
-    //border: solid 1px;
-}
+
 .search {
     width: 246px;
     height: 40px;
     margin-left: -22px;
+    margin-top: 102px;
     margin-bottom: 32px;
     position: relative;
-    & input {
-        width: 100%;
+    &__text {
         padding-right: 50px;
         padding-left: 53px;
         font-style: normal;
         font-weight: normal;
         font-size: 16px;
-        line-height: 40px;
+        line-height: 2.5;
         background-color: transparent;
         //border: solid 1px;
     }
-    & input::-webkit-input-placeholder {
+    &__text::-webkit-input-placeholder {
         color: #0e1c32;
     }
-    & button {
+    &__button {
         width: 19px;
         height: 19px;
         position: absolute;
@@ -69,6 +65,65 @@
     }
 }
 
+.menu {
+    // background-color: rgb(161, 144, 238);
+    outline: burlywood 0px solid;
+}
+
+.accardeon {
+    &__item {
+        // outline: rgb(0, 0, 0) 1px solid;
+        margin-bottom: 30px;
+    }
+
+    &__item--active &__triger {
+        background-color: rgba($color: #fff, $alpha: 0.2);
+    }
+
+    &__item--active &__content {
+        display: block;
+    }
+
+    &__triger {
+        cursor: pointer;
+        display: block;
+
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 1.25;
+    }
+    &__triger--active {
+        display: block;
+        background-color: rgba($color: #fff, $alpha: 0.2);
+    }
+
+    &__content {
+        display: none;
+    }
+
+    // &__radio:checked ~ &__triger {
+    //     background-color: rgba($color: #fff, $alpha: 0.2);
+    // }
+    // &__radio:checked ~ &__content {
+    //     display: block;
+    // }
+}
+
+.accardeon-submenu {
+    margin-top: 17px;
+
+    &__item:not(:last-cild) {
+        margin-top: 8px;
+    }
+
+    &__link {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.25;
+        color: var(--main-color);
+    }
+}
+
 .button {
     text-decoration: none;
     width: 192px;
@@ -89,9 +144,6 @@
     height: 96px;
     flex-direction: column;
     justify-content: space-between;
-
-    &__button {
-    }
 
     &__button--blue {
         border: solid 1px #ffffff;
