@@ -1,0 +1,40 @@
+.right__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rotated {
+    transform: rotate(-90deg);
+}
+.right-menu {
+    // border: rgb(130, 238, 197) solid;
+    // margin: 0 auto;
+
+    display: flex;
+    flex-direction: row-reverse;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 32px;
+    justify-content: center;
+    align-items: center;
+
+    &__item {
+        display: block;
+    }
+
+    &__item:not(:first-child) {
+        margin-right: 30px;
+    }
+
+    &__link {
+        color: var(--secondary-color);
+    }
+
+    &__link--active {
+        display: block;
+        padding: 11px 20px;
+        color: var(--main-color);
+        background-color: var(--brand-color);
+        border-radius: 8px;
+    }
+}

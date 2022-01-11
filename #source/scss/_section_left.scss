@@ -79,7 +79,7 @@
 .accardeon {
     &__item {
         // outline: rgb(0, 0, 0) 1px solid;
-        margin-bottom: 30px;
+        margin-bottom: 25px;
         position: relative;
         &::after {
             content: "";
@@ -103,7 +103,7 @@
     }
 
     &__item--active &__triger {
-        background-color: rgba($color: #fff, $alpha: 0.2);
+        // background-color: rgba($color: #fff, $alpha: 0.2);
 
         &::before {
             content: "";
@@ -149,7 +149,7 @@
     }
     &__triger--active {
         display: block;
-        background-color: rgba($color: #fff, $alpha: 0.2);
+        // background-color: rgba($color: #fff, $alpha: 0.2);
     }
 
     &__content {
@@ -159,10 +159,28 @@
 }
 
 .accardeon-submenu {
-    margin-top: 17px;
+    margin-top: 15px;
 
-    &__item:not(:last-cild) {
-        margin-top: 8px;
+    &__item:not(:last-child) {
+        margin-bottom: 7px;
+    }
+
+    &__item {
+        position: relative;
+        &--active::after {
+            content: "";
+            position: absolute;
+            // outline: 2px solid rgb(116, 255, 190);
+            width: 240px;
+            height: 28px;
+            background: linear-gradient(90.02deg, rgba(196, 196, 196, 0) 27.56%, rgba(196, 196, 196, 0.2) 102.5%),
+                url("../../img/leftside/Ellipse1.svg"), url("../../img/leftside/Ellipse1.svg");
+            background-repeat: no-repeat;
+            top: -4px;
+            left: -32px;
+            background-position: 0 0, 211px 50%, 225px 50%;
+            background-size: 100%, 10px, 28px;
+        }
     }
 
     &__link {

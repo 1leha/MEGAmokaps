@@ -87,6 +87,8 @@ h6 {
 
 :root {
   --main-font: "Montserrat", sans-serif;
+  --primary-color: #000;
+  --secondary-color: #a0a0a0;
   --main-color: #fff;
   --brand-color: #0e1c32;
 }
@@ -233,7 +235,7 @@ body {
 }
 
 .accardeon__item {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   position: relative;
 }
 
@@ -255,10 +257,6 @@ body {
 
 .accardeon__item--active::after {
   content: none;
-}
-
-.accardeon__item--active .accardeon__triger {
-  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .accardeon__item--active .accardeon__triger::before {
@@ -308,7 +306,6 @@ body {
 
 .accardeon__triger--active {
   display: block;
-  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .accardeon__content {
@@ -317,11 +314,28 @@ body {
 }
 
 .accardeon-submenu {
-  margin-top: 17px;
+  margin-top: 15px;
 }
 
-.accardeon-submenu__item:not(:last-cild) {
-  margin-top: 8px;
+.accardeon-submenu__item:not(:last-child) {
+  margin-bottom: 7px;
+}
+
+.accardeon-submenu__item {
+  position: relative;
+}
+
+.accardeon-submenu__item--active::after {
+  content: "";
+  position: absolute;
+  width: 240px;
+  height: 28px;
+  background: linear-gradient(90.02deg, rgba(196, 196, 196, 0) 27.56%, rgba(196, 196, 196, 0.2) 102.5%), url("../../img/leftside/Ellipse1.svg"), url("../../img/leftside/Ellipse1.svg");
+  background-repeat: no-repeat;
+  top: -4px;
+  left: -32px;
+  background-position: 0 0, 211px 50%, 225px 50%;
+  background-size: 100%, 10px, 28px;
 }
 
 .accardeon-submenu__link {
@@ -434,6 +448,62 @@ body {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }
+}
+
+.right__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.rotated {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.right-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 32px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.right-menu__item {
+  display: block;
+}
+
+.right-menu__item:not(:first-child) {
+  margin-right: 30px;
+}
+
+.right-menu__link {
+  color: var(--secondary-color);
+}
+
+.right-menu__link--active {
+  display: block;
+  padding: 11px 20px;
+  color: var(--main-color);
+  background-color: var(--brand-color);
+  border-radius: 8px;
 }
 
 .card {
