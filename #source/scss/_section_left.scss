@@ -17,7 +17,7 @@
     width: 246px;
     height: 40px;
     margin-left: -22px;
-    margin-top: 102px;
+    margin-top: 90px;
     margin-bottom: 32px;
     position: relative;
     &__text {
@@ -91,6 +91,9 @@
             background: linear-gradient(270deg, rgba(255, 255, 255, 0.1) -5.73%, rgba(255, 255, 255, 0) 97.39%);
             // background-color: red;
         }
+        &:last-child::after {
+            content: none;
+        }
     }
     &__item--active {
         // outline: rgb(0, 0, 0) 1px solid;
@@ -138,7 +141,7 @@
             width: 8px;
             height: 5px;
             // background-color: #fff;
-            background-image: url("../../img/leftside/arrow-down.svg");
+            background-image: url("./../../img/leftside/arrow-down.svg");
             background-repeat: no-repeat;
             right: 8px;
             top: 50%;

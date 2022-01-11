@@ -170,7 +170,7 @@ body {
   width: 246px;
   height: 40px;
   margin-left: -22px;
-  margin-top: 102px;
+  margin-top: 90px;
   margin-bottom: 32px;
   position: relative;
   background: #ffffff;
@@ -250,6 +250,10 @@ body {
   background: linear-gradient(270deg, rgba(255, 255, 255, 0.1) -5.73%, rgba(255, 255, 255, 0) 97.39%);
 }
 
+.accardeon__item:last-child::after {
+  content: none;
+}
+
 .accardeon__item--active {
   margin-bottom: 30px;
   position: relative;
@@ -292,7 +296,7 @@ body {
   display: block;
   width: 8px;
   height: 5px;
-  background-image: url("../../img/leftside/arrow-down.svg");
+  background-image: url("./../../img/leftside/arrow-down.svg");
   background-repeat: no-repeat;
   right: 8px;
   top: 50%;
