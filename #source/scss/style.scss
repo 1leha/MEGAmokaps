@@ -22,14 +22,14 @@ body {
     // position: absolute;
     // top: 0px;
     // right: 0px;
-    // background-color: rgb(255, 194, 194);
+    background-color: var(--main-color);
     // width: 720px;
     // height: 720px;
     background-image: url("./../img/bg/bigLogo_bg.svg");
     background-repeat: no-repeat;
     background-position: top right;
     background-attachment: fixed;
-    z-index: 1;
+    z-index: 110;
 }
 
 .page-row {

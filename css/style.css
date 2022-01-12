@@ -103,11 +103,12 @@ body {
 }
 
 .bg {
+  background-color: var(--main-color);
   background-image: url("./../img/bg/bigLogo_bg.svg");
   background-repeat: no-repeat;
   background-position: top right;
   background-attachment: fixed;
-  z-index: 1;
+  z-index: 110;
 }
 
 .page-row {
@@ -398,27 +399,6 @@ body {
   background-color: #c7cedb;
 }
 
-.page-row__center {
-  padding-bottom: 30px;
-}
-
-.center-content {
-  width: 100%;
-  padding: 0 30px;
-}
-
-.location {
-  max-width: 1230px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
-}
-
-.location__item {
-  margin-top: 32px;
-  padding-bottom: 32px;
-}
-
 .title {
   font-size: 36px;
   line-height: 40px;
@@ -430,7 +410,36 @@ body {
   font-size: 48px;
   line-height: 59px;
   color: #0e1c32;
-  margin-bottom: 36px;
+}
+
+.page-row {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.page-row__center {
+  padding-bottom: 30px;
+}
+
+.center-content {
+  width: 100%;
+  padding: 0 20px;
+}
+
+.location {
+  max-width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 32px;
+  padding-bottom: 20px;
+  margin: 0 auto;
+}
+
+.location__title {
+  font-size: 48px;
+}
+
+.location__item:not(:last-child) {
+  margin-bottom: 62px;
 }
 
 .grid {
