@@ -108,7 +108,7 @@ body {
   right: 0px;
   width: 720px;
   height: 720px;
-  background-image: url("../../img/bg/bigLogo_bg.svg");
+  background-image: url("./../img/bg/bigLogo_bg.svg");
   background-repeat: no-repeat;
   background-position: 0px 0px;
   z-index: 0;
@@ -203,7 +203,7 @@ body {
 }
 
 .search__button::before {
-  content: url("../img/leftside/lupa.svg");
+  content: url("./../img/leftside/lupa.svg");
 }
 
 .item-center {
@@ -296,7 +296,7 @@ body {
   display: block;
   width: 8px;
   height: 5px;
-  background-image: url("./../../img/leftside/arrow-down.svg");
+  background-image: url("./../img/leftside/arrow-down.svg");
   background-repeat: no-repeat;
   right: 8px;
   top: 50%;
@@ -334,7 +334,7 @@ body {
   position: absolute;
   width: 240px;
   height: 28px;
-  background: linear-gradient(90.02deg, rgba(196, 196, 196, 0) 27.56%, rgba(196, 196, 196, 0.2) 102.5%), url("../../img/leftside/Ellipse1.svg"), url("../../img/leftside/Ellipse1.svg");
+  background: linear-gradient(90.02deg, rgba(196, 196, 196, 0) 27.56%, rgba(196, 196, 196, 0.2) 102.5%), url("./../img/leftside/Ellipse1.svg"), url("./../img/leftside/Ellipse1.svg");
   background-repeat: no-repeat;
   top: -4px;
   left: -32px;

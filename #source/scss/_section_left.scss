@@ -42,7 +42,7 @@
         cursor: pointer;
         background-color: transparent;
         &::before {
-            content: url("../img/leftside/lupa.svg");
+            content: url("./../img/leftside/lupa.svg");
         }
     }
     background: #ffffff;
@@ -141,7 +141,7 @@
             width: 8px;
             height: 5px;
             // background-color: #fff;
-            background-image: url("./../../img/leftside/arrow-down.svg");
+            background-image: url("./../img/leftside/arrow-down.svg");
             background-repeat: no-repeat;
             right: 8px;
             top: 50%;
@@ -177,7 +177,7 @@
             width: 240px;
             height: 28px;
             background: linear-gradient(90.02deg, rgba(196, 196, 196, 0) 27.56%, rgba(196, 196, 196, 0.2) 102.5%),
-                url("../../img/leftside/Ellipse1.svg"), url("../../img/leftside/Ellipse1.svg");
+                url("./../img/leftside/Ellipse1.svg"), url("./../img/leftside/Ellipse1.svg");
             background-repeat: no-repeat;
             top: -4px;
             left: -32px;
