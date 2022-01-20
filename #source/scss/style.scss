@@ -7,17 +7,24 @@
     --secondary-color: #a0a0a0;
     --main-color: #fff;
     --brand-color: #0e1c32;
+    --active-color: #e7f0ff;
+    --active-btn-color: rgba(14, 28, 50, 0.1);
+    --active-btn-color2: rgba(14, 28, 50, 0.1);
+    // --active-btn-color: #e7e9eb;
 }
 
 body {
     font-family: var(--main-font);
+    color: var(--brand-color);
 }
+
 .wrapper {
     //border: black dashed 2px;
     width: 100%;
     //background-color: rgb(87, 13, 13);
     height: 100%;
 }
+
 .bg {
     // position: absolute;
     // top: 0px;

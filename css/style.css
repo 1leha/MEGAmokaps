@@ -91,10 +91,14 @@ h6 {
   --secondary-color: #a0a0a0;
   --main-color: #fff;
   --brand-color: #0e1c32;
+  --active-color: #e7f0ff;
+  --active-btn-color: rgba(14, 28, 50, 0.1);
+  --active-btn-color2: rgba(14, 28, 50, 0.1);
 }
 
 body {
   font-family: var(--main-font);
+  color: var(--brand-color);
 }
 
 .wrapper {
@@ -413,7 +417,7 @@ body {
 }
 
 .page-row {
-  background-color: rgba(255, 255, 255, 0);
+  height: 100%;
 }
 
 .page-row__center {
@@ -529,13 +533,18 @@ body {
 .card {
   width: 288px;
   height: 356px;
-  -webkit-box-shadow: 0px 8px 24px -6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0px 8px 24px -6px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0px 8px 15px -6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 8px 15px -6px rgba(0, 0, 0, 0.16);
   -webkit-filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.4));
           filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.4));
   border-radius: 11px;
   overflow: hidden;
   background-color: white;
+  position: relative;
+}
+
+.card__content {
+  position: absolute;
 }
 
 .card__container {
@@ -564,28 +573,105 @@ body {
           flex: 0 0 80%;
 }
 
-.card__checkbox-label {
+.card__title {
   display: inline-block;
-  padding-right: 12px;
+  margin-right: 12px;
   font-size: 14px;
+  line-height: calc(21 / 14);
   font-weight: 600;
 }
 
 .card__checkbox {
   cursor: pointer;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.card__custom-checkbox {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.card__custom-checkbox > span::before {
+  content: "";
+  display: inline-block;
   width: 16px;
   height: 16px;
-  background: #0e1c32;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  border: solid 1px var(--brand-color);
+  border-radius: 2px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 75% 75%;
+}
+
+.card__custom-checkbox > input:not(:disabled):not(:active) + span:active:before {
+  display: inline-block;
+  background-color: var(--main-color);
+}
+
+.card__custom-checkbox > input:checked + span:before {
+  display: inline-block;
+  background-image: url("./../../img/cards/checked.svg");
+  background-color: var(--brand-color);
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 2px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
 }
 
-.card__checkbox-sublabel {
+.card__custom-checkbox > span::after {
+  content: "";
+  position: absolute;
+  display: none;
+  width: 24px;
+  height: 24px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  left: calc((24px - 16px) / 2 * -1);
+  top: calc((24px - 16px) / 2 * -1);
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  background-color: var(--active-btn-color);
+  z-index: -1;
+}
+
+.card__custom-checkbox > input:not(:disabled):not(:checked) + span:hover::after {
+  display: inline-block;
+}
+
+.card__custom-checkbox > input:not(:disabled):not(:active) + span:active:after {
+  display: inline-block;
+  opacity: 1;
+}
+
+.card__custom-checkbox > input:checked + span:after {
+  display: inline-block;
+  background-color: var(--active-btn-color2);
+}
+
+.card__subtitle {
   font-size: 12px;
+  line-height: calc(18 / 12);
 }
 
 .card__download {
@@ -593,15 +679,13 @@ body {
       -ms-flex: 0 0 20%;
           flex: 0 0 20%;
   position: relative;
-  position: relative;
 }
 
-.card:hover {
-  background-color: #e7f0ff;
-}
-
-.card:focus {
-  background-color: #e7f0ff;
+.card:hover, .card:focus {
+  -webkit-box-shadow: 0px 12px 12px -6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 12px 12px -6px rgba(0, 0, 0, 0.16);
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.15));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.15));
 }
 
 .info__wrapper {
@@ -616,25 +700,67 @@ body {
 }
 
 .download-button {
-  width: 64px;
-  height: 36px;
-  background: #0e1c32;
-  border: 1px solid #000000;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 64px;
+  height: 36px;
+  background-color: var(--active-btn-color);
   border-radius: 10px 0px 0px 10px;
   position: absolute;
+  -webkit-transition: ease-out 0.1s;
+  transition: ease-out 0.1s;
   -webkit-transform: translate(25px, 0px);
           transform: translate(25px, 0px);
+  fill: var(--brand-color);
 }
 
-.download-button__image {
+.download-button__icon {
+  fill: inherit;
   position: absolute;
   top: 50%;
-  -webkit-transform: translate(14px, -50%);
-          transform: translate(14px, -50%);
+  left: 12px;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.download-button:hover {
+  -webkit-transform: translate(15px, 0px);
+          transform: translate(15px, 0px);
+}
+
+.download-button:active {
+  background-color: var(--brand-color);
+  fill: var(--main-color);
+}
+
+.card-selected {
+  background-color: var(--active-color);
+  position: relative;
+}
+
+.card-selected::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  left: 0;
+  bottom: 0px;
+  background-color: var(--brand-color);
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .settings {
@@ -650,6 +776,43 @@ body {
   left: 6px;
   bottom: 6px;
   z-index: 2;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  fill: var(--brand-color);
+}
+
+.settings__link:hover, .settings__link:focus {
+  background-color: var(--brand-color);
+  fill: var(--main-color);
+}
+
+.settings__link:active {
+  background-color: var(--main-color);
+  fill: var(--brand-color);
+  border: solid 1px var(--brand-color);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.settings__img {
+  fill: inherit;
+  width: 12px;
+  height: 12px;
+}
+
+.card-new {
+  display: block;
+  color: inherit;
+}
+
+.card-new__image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -659,8 +822,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.settings__img {
-  width: 60%;
+  width: 265px;
+  height: 265px;
+  margin-bottom: 16px;
+  padding: 97px;
+  border: solid 1px var(--active-btn-color);
+  border-radius: 10px;
+  overflow: hidden;
 }
