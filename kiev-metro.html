@@ -1,217 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <title>MEGA-mokaps</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="./css/style.css" />
-  <title>MEGA-mokaps</title>
-</head>
+  <body>
+    <!-- Основной блок страницы -->
+    <div class="wrapper">
+      <!-- <div class="bg"></div> -->
+      <!-- ФЛЕКС-разметка страницы -->
+      <div class="page-row bg">
+        <!-- Левая секция -->
+        <div class="page-row__left">
+          <div class="left__content">
+            <!--ФЛЕКС для side (лого, поиск, меню, кнопки)-->
+            <div class="left-row">
+              <!-- Верхний элемент сайдбара (лого) -->
+              <div class="left-row__item item-header">
+                <a class="logo" href="./index.html">
+                  <img src="./img/leftside/megalogo.svg" alt="megapolis logo" />
+                </a>
+              </div>
+              <!-- Форма поиска -->
+              <div class="left-row__item search">
+                <form action="#" method="get">
+                  <input class="search__text" type="text" placeholder="Поиск" />
+                  <button class="search__button" type="button"></button>
+                </form>
+              </div>
+              <!-- Центральный элемент сайдбара (меню) -->
+              <div class="left-row__item item-center">
+                <!-- Меню -->
+                <nav class="menu">
+                  <div class="conteiner">
+                    <ul class="menu__list accordion">
+                      <!-- Меню Харьков -->
+                      <li class="accardeon__item">
+                        <div class="accardeon__triger">Харьков</div>
+                        <div class="accordion__content">
+                          <ul class="accordion-submenu">
+                            <li class="accordion-submenu__item">
+                              <a class="accordion-submenu__link" href="./index.html">Метро</a>
+                            </li>
+                            <li class="accordion-submenu__item">
+                              <a class="accordion-submenu__link" href="./kharkov-ooh.html"
+                                >Наружка</a
+                              >
+                            </li>
+                            <li class="accordion-submenu__item">
+                              <a class="accordion-submenu__link" href="./kharkov-mah.html"
+                                >Аэропорт</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
 
-<body>
-  <!-- Основной блок страницы -->
-  <div class="wrapper">
-    <!-- <div class="bg"></div> -->
-    <!-- ФЛЕКС-разметка страницы -->
-    <div class="page-row bg">
-      <!-- Левая секция -->
-      <div class="page-row__left">
-        <div class="left__content">
-          <!--ФЛЕКС для side (лого, поиск, меню, кнопки)-->
-          <div class="left-row">
-            <!-- Верхний элемент сайдбара (лого) -->
-            <div class="left-row__item item-header">
-              <a class="logo" href="./index.html">
-                <img src="./img/leftside/megalogo.svg" alt="megapolis logo" />
-              </a>
-            </div>
-            <!-- Форма поиска -->
-            <div class="left-row__item search">
-              <form action="#" method="get">
-                <input class="search__text" type="text" placeholder="Поиск" />
-                <button class="search__button" type="button"></button>
-              </form>
-            </div>
-            <!-- Центральный элемент сайдбара (меню) -->
-            <div class="left-row__item item-center">
-              <!-- Меню -->
-              <nav class="menu">
-                <div class="conteiner">
-                  <ul class="menu__list accardeon">
+                      <!-- Меню Киев -->
+                      <li class="accardeon__item accardeon__item--active">
+                        <div class="accardeon__triger">Киев</div>
+                        <div class="accordion__content">
+                          <ul class="accordion-submenu">
+                            <li class="accordion-submenu__item">
+                              <a
+                                class="accordion-submenu__link accordion-submenu__item--active"
+                                href=""
+                                >Метро</a
+                              >
+                            </li>
+                            <li class="accordion-submenu__item">
+                              <a class="accordion-submenu__link" href="">Наружка</a>
+                            </li>
+                            <li class="accordion-submenu__item">
+                              <a class="accordion-submenu__link" href="">Аэропорт</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
 
-                    <!-- Меню Харьков -->
-                    <li class="accardeon__item">
-                      <div class="accardeon__triger">Харьков</div>
-                      <div class="accardeon__content">
-                        <ul class="accardeon-submenu">
-                          <li class="accardeon-submenu__item">
-                            <a class="accardeon-submenu__link" href="./index.html">Метро</a>
-                          </li>
-                          <li class="accardeon-submenu__item">
-                            <a class="accardeon-submenu__link" href="./kharkov-ooh.html">Наружка</a>
-                          </li>
-                          <li class="accardeon-submenu__item">
-                            <a class="accardeon-submenu__link" href="./kharkov-mah.html">Аэропорт</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
+                      <!-- Меню Одесса -->
+                      <li class="accardeon__item">
+                        <div class="accardeon__triger">Одесса</div>
+                        <div class="accordion__content">
+                          <ul class="accordion-submenu">
+                            <li class="accordion-submenu__item">
+                              <a class="accordion-submenu__link" href="">Метро</a>
+                            </li>
+                            <li class="accordion-submenu__item">
+                              <a class="accordion-submenu__link" href="">Наружка</a>
+                            </li>
+                            <li class="accordion-submenu__item">
+                              <a class="accordion-submenu__link" href="">Аэропорт</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
 
-                    <!-- Меню Киев -->
-                    <li class="accardeon__item accardeon__item--active">
-                      <div class="accardeon__triger">Киев</div>
-                      <div class="accardeon__content">
-                        <ul class="accardeon-submenu">
-                          <li class="accardeon-submenu__item">
-                            <a class="accardeon-submenu__link  accardeon-submenu__item--active" href="">Метро</a>
-                          </li>
-                          <li class="accardeon-submenu__item">
-                            <a class="accardeon-submenu__link" href="">Наружка</a>
-                          </li>
-                          <li class="accardeon-submenu__item">
-                            <a class="accardeon-submenu__link" href="">Аэропорт</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
+                      <!-- Меню Львов -->
+                      <li class="accardeon__item">
+                        <div class="accardeon__triger">Львов</div>
+                        <div class="accordion__content">
+                          <ul class="accordion-submenu">
+                            <li class="accordion-submenu__item">
+                              <a class="accordion-submenu__link" href="">Метро</a>
+                            </li>
+                            <li class="accordion-submenu__item">
+                              <a class="accordion-submenu__link" href="">Наружка</a>
+                            </li>
+                            <li class="accordion-submenu__item">
+                              <a class="accordion-submenu__link" href="">Аэропорт</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
 
-                    <!-- Меню Одесса -->
-                    <li class="accardeon__item">
-                      <div class="accardeon__triger">Одесса</div>
-                      <div class="accardeon__content">
-                        <ul class="accardeon-submenu">
-                          <li class="accardeon-submenu__item">
-                            <a class="accardeon-submenu__link" href="">Метро</a>
-                          </li>
-                          <li class="accardeon-submenu__item">
-                            <a class="accardeon-submenu__link" href="">Наружка</a>
-                          </li>
-                          <li class="accardeon-submenu__item">
-                            <a class="accardeon-submenu__link" href="">Аэропорт</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
+                      <!-- Меню Запорожье -->
+                      <li class="accardeon__item">
+                        <div class="accardeon__triger">Запорожье</div>
+                        <div class="accordion__content">
+                          <ul class="accordion-submenu">
+                            <li class="accordion-submenu__item">
+                              <a class="accordion-submenu__link" href="">Метро</a>
+                            </li>
+                            <li class="accordion-submenu__item">
+                              <a class="accordion-submenu__link" href="">Наружка</a>
+                            </li>
+                            <li class="accordion-submenu__item">
+                              <a class="accordion-submenu__link" href="">Аэропорт</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
 
-                    <!-- Меню Львов -->
-                    <li class="accardeon__item">
-                      <div class="accardeon__triger">Львов</div>
-                      <div class="accardeon__content">
-                        <ul class="accardeon-submenu">
-                          <li class="accardeon-submenu__item">
-                            <a class="accardeon-submenu__link" href="">Метро</a>
-                          </li>
-                          <li class="accardeon-submenu__item">
-                            <a class="accardeon-submenu__link" href="">Наружка</a>
-                          </li>
-                          <li class="accardeon-submenu__item">
-                            <a class="accardeon-submenu__link" href="">Аэропорт</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
+                      <!-- Меню Днепр -->
+                      <li class="accardeon__item">
+                        <div class="accardeon__triger">Днепр</div>
+                        <div class="accordion__content">
+                          <ul class="accordion-submenu">
+                            <li class="accordion-submenu__item">
+                              <a class="accordion-submenu__link" href="">Метро</a>
+                            </li>
+                            <li class="accordion-submenu__item">
+                              <a class="accordion-submenu__link" href="">Наружка</a>
+                            </li>
+                            <li class="accordion-submenu__item">
+                              <a class="accordion-submenu__link" href="">Аэропорт</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
 
-                    <!-- Меню Запорожье -->
-                    <li class="accardeon__item">
-                      <div class="accardeon__triger">Запорожье</div>
-                      <div class="accardeon__content">
-                        <ul class="accardeon-submenu">
-                          <li class="accardeon-submenu__item">
-                            <a class="accardeon-submenu__link" href="">Метро</a>
-                          </li>
-                          <li class="accardeon-submenu__item">
-                            <a class="accardeon-submenu__link" href="">Наружка</a>
-                          </li>
-                          <li class="accardeon-submenu__item">
-                            <a class="accardeon-submenu__link" href="">Аэропорт</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
+                      <!-- Меню Транспорт -->
+                      <li class="accardeon__item">
+                        <div class="accardeon__triger">Транспорт</div>
+                        <div class="accordion__content">
+                          <ul class="accordion-submenu">
+                            <li class="accordion-submenu__item">
+                              <a class="accordion-submenu__link" href="">Метро</a>
+                            </li>
+                            <li class="accordion-submenu__item">
+                              <a class="accordion-submenu__link" href="">Наружка</a>
+                            </li>
+                            <li class="accordion-submenu__item">
+                              <a class="accordion-submenu__link" href="">Аэропорт</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
 
-                    <!-- Меню Днепр -->
-                    <li class="accardeon__item">
-                      <div class="accardeon__triger">Днепр</div>
-                      <div class="accardeon__content">
-                        <ul class="accardeon-submenu">
-                          <li class="accardeon-submenu__item">
-                            <a class="accardeon-submenu__link" href="">Метро</a>
-                          </li>
-                          <li class="accardeon-submenu__item">
-                            <a class="accardeon-submenu__link" href="">Наружка</a>
-                          </li>
-                          <li class="accardeon-submenu__item">
-                            <a class="accardeon-submenu__link" href="">Аэропорт</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
+                      <!-- Меню Рендер -->
+                      <li class="accardeon__item">
+                        <div class="accardeon__triger">Рендер</div>
+                        <div class="accordion__content">
+                          <ul class="accordion-submenu">
+                            <li class="accordion-submenu__item">
+                              <a class="accordion-submenu__link" href="">Метро</a>
+                            </li>
+                            <li class="accordion-submenu__item">
+                              <a class="accordion-submenu__link" href="">Наружка</a>
+                            </li>
+                            <li class="accordion-submenu__item">
+                              <a class="accordion-submenu__link" href="">Аэропорт</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
 
-                    <!-- Меню Транспорт -->
-                    <li class="accardeon__item">
-                      <div class="accardeon__triger">Транспорт</div>
-                      <div class="accardeon__content">
-                        <ul class="accardeon-submenu">
-                          <li class="accardeon-submenu__item">
-                            <a class="accardeon-submenu__link" href="">Метро</a>
-                          </li>
-                          <li class="accardeon-submenu__item">
-                            <a class="accardeon-submenu__link" href="">Наружка</a>
-                          </li>
-                          <li class="accardeon-submenu__item">
-                            <a class="accardeon-submenu__link" href="">Аэропорт</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
+                      <!-- Меню Накрышники -->
+                      <li class="accardeon__item">
+                        <div class="accardeon__triger">Накрышники</div>
+                        <div class="accordion__content">
+                          <ul class="accordion-submenu">
+                            <li class="accordion-submenu__item">
+                              <a class="accordion-submenu__link" href="">Метро</a>
+                            </li>
 
-                    <!-- Меню Рендер -->
-                    <li class="accardeon__item">
-                      <div class="accardeon__triger">Рендер</div>
-                      <div class="accardeon__content">
-                        <ul class="accardeon-submenu">
-                          <li class="accardeon-submenu__item">
-                            <a class="accardeon-submenu__link" href="">Метро</a>
-                          </li>
-                          <li class="accardeon-submenu__item">
-                            <a class="accardeon-submenu__link" href="">Наружка</a>
-                          </li>
-                          <li class="accardeon-submenu__item">
-                            <a class="accardeon-submenu__link" href="">Аэропорт</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
+                            <li class="accordion-submenu__item">
+                              <a class="accordion-submenu__link" href="">Наружка</a>
+                            </li>
 
-                    <!-- Меню Накрышники -->
-                    <li class="accardeon__item">
-                      <div class="accardeon__triger">Накрышники</div>
-                      <div class="accardeon__content">
-                        <ul class="accardeon-submenu">
-
-                          <li class="accardeon-submenu__item">
-                            <a class="accardeon-submenu__link" href="">Метро</a>
-                          </li>
-
-                          <li class="accardeon-submenu__item">
-                            <a class="accardeon-submenu__link" href="">Наружка</a>
-                          </li>
-
-                          <li class="accardeon-submenu__item">
-                            <a class="accardeon-submenu__link" href="">Аэропорт</a>
-                          </li>
-
-                        </ul>
-                      </div>
-                    </li>
-                  </ul>
-
-                </div>
-              </nav>
-            </div>
-            <!-- Нижний элемент сайдбара (кнопки) -->
-            <!-- <div class="left-row__item item-footer">
+                            <li class="accordion-submenu__item">
+                              <a class="accordion-submenu__link" href="">Аэропорт</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+              <!-- Нижний элемент сайдбара (кнопки) -->
+              <!-- <div class="left-row__item item-footer">
               <div class="conteiner">
                 <div class="buttons">
                   <a href="" class="buttons__button buttons__button--blue button">Добавить новый</a>
@@ -219,308 +222,299 @@
                 </div>
               </div>
             </div> -->
+            </div>
           </div>
         </div>
-      </div>
-      <!-- Центральная секция -->
-      <div class="page-row__center">
-        <!-- ограничитель контента -->
-        <main class="center-content">
-          <section class="location">
-            <!-- <h1 class="section-title title">Харьковское метро</h1> -->
+        <!-- Центральная секция -->
+        <div class="page-row__center">
+          <!-- ограничитель контента -->
+          <main class="center-content">
+            <section class="location">
+              <!-- <h1 class="section-title title">Харьковское метро</h1> -->
 
-            <!-- Структура для флекс-контейнера локаций. Список локаций, 
+              <!-- Структура для флекс-контейнера локаций. Список локаций, 
               типа метро Харьков, переходы, бэки и тд. -->
-            <ul class="location__list">
+              <ul class="location__list">
+                <!-- Харьковское метро. Станции -->
+                <li class="location__item">
+                  <h2 class="location__title title" id="stations">Станции</h2>
+                  <ul class="location__grid grid">
+                    <!-- ------------------------------- -->
+                    <li class="grid__item">
+                      <!-- Новая карточка -->
+                      <a class="card-new card" href="">
+                        <div class="card__content">
+                          <div class="card__container">
+                            <div class="card-new__image">
+                              <img width="265" src="./img/cards/add-new.svg" />
+                            </div>
 
-              <!-- Харьковское метро. Станции -->
-              <li class="location__item">
-                <h2 class="location__title title" id="stations">Станции</h2>
-                <ul class="location__grid grid">
+                            <div class="card-new__footer">
+                              <!-- Нижня часть карточки с текстом -->
+                              <div class="card-new__info">
+                                <h3 class="card__title">Новый</h3>
+                                <p class="card__subtitle">Добавить новую карточку в категорию</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <!-- ------------------------------- -->
 
-                  <!-- ------------------------------- -->
-                  <li class="grid__item">
-                    <!-- Новая карточка -->
-                    <a class="card-new card" href="">
-
-                      <div class="card__content">
+                    <!-- ------------------------------- -->
+                    <li class="grid__item">
+                      <!-- Карточка -->
+                      <div class="card">
                         <div class="card__container">
-                          <div class="card-new__image">
-                            <img width="265" src="./img/cards/add-new.svg" />
+                          <div class="card__image">
+                            <img
+                              width="265"
+                              src="img/cards/card_img_alexeevska.jpg"
+                              alt="ст. м. Алексеевская"
+                            />
+                            <div class="settings">
+                              <a class="settings__link" href="">
+                                <svg
+                                  class="settings__img"
+                                  width="12"
+                                  height="12"
+                                  viewBox="0 0 12 12"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M11.284 4.23961C11.0506 4.2038 10.8278 4.11285 10.6323 3.97352C10.4368 3.83419 10.2736 3.65007 10.1548 3.43488C10.036 3.21969 9.96472 2.97897 9.94622 2.73065C9.92773 2.48232 9.96252 2.23279 10.048 2.00063C10.1023 1.84886 10.1103 1.68293 10.0709 1.5261C10.0314 1.36928 9.94651 1.22943 9.828 1.12616C9.30481 0.662169 8.7093 0.297671 8.068 0.048915C7.92197 -0.0083763 7.76254 -0.0155344 7.61244 0.0284604C7.46233 0.0724552 7.32919 0.165359 7.232 0.293936C7.08571 0.491495 6.89875 0.651279 6.68529 0.761169C6.47183 0.871059 6.23747 0.92817 6 0.92817C5.76253 0.92817 5.52818 0.871059 5.31472 0.761169C5.10126 0.651279 4.91429 0.491495 4.76801 0.293936C4.67081 0.165359 4.53768 0.0724552 4.38757 0.0284604C4.23746 -0.0155344 4.07804 -0.0083763 3.93201 0.048915C3.33987 0.278576 2.78624 0.606579 2.29201 1.02055C2.16742 1.12471 2.07769 1.26826 2.03594 1.43018C1.9942 1.59209 2.00263 1.76387 2.06001 1.92036C2.15231 2.15866 2.19044 2.41649 2.17136 2.67317C2.15227 2.92984 2.07648 3.17822 1.95009 3.39838C1.82369 3.61854 1.6502 3.80435 1.44352 3.9409C1.23685 4.07745 1.00275 4.16095 0.760008 4.18469C0.602411 4.20249 0.454389 4.27325 0.337733 4.38657C0.221077 4.49989 0.141953 4.64977 0.112009 4.81414C0.0375277 5.20351 8.65615e-06 5.59976 8.65615e-06 5.997C-0.000538781 6.32956 0.0248807 6.6616 0.0760086 6.98975C0.101455 7.1594 0.179107 7.31546 0.29696 7.43382C0.414814 7.55218 0.566304 7.62624 0.728008 7.64455C0.976086 7.66914 1.21498 7.75612 1.42469 7.89823C1.6344 8.04034 1.80883 8.23343 1.93338 8.46135C2.05793 8.68927 2.12897 8.94538 2.14056 9.20825C2.15216 9.47111 2.10396 9.73309 2.00001 9.97224C1.93198 10.1278 1.9151 10.3029 1.95206 10.4698C1.98902 10.6366 2.0777 10.7856 2.20401 10.8932C2.72405 11.3487 3.31384 11.7073 3.94801 11.9535C4.0291 11.9832 4.11419 11.9989 4.20001 12C4.31767 11.9997 4.43357 11.9697 4.53796 11.9123C4.64236 11.855 4.73222 11.7721 4.80001 11.6705C4.94257 11.4511 5.13368 11.2718 5.35674 11.1481C5.5798 11.0245 5.82807 10.9601 6.08 10.9608C6.32411 10.9611 6.56476 11.0216 6.78281 11.1375C7.00087 11.2534 7.19029 11.4214 7.336 11.6282C7.43293 11.7658 7.57022 11.8657 7.72649 11.9123C7.88276 11.9589 8.04924 11.9497 8.2 11.8859C8.77988 11.6395 9.31972 11.2988 9.8 10.8763C9.92065 10.7709 10.0066 10.6279 10.0454 10.4677C10.0842 10.3076 10.0739 10.1385 10.016 9.98492C9.92192 9.74969 9.8809 9.49459 9.89618 9.23974C9.91145 8.9849 9.98261 8.7373 10.104 8.51648C10.2254 8.29566 10.3938 8.10767 10.5958 7.96734C10.7978 7.82702 11.0279 7.73821 11.268 7.70792C11.4237 7.68518 11.5685 7.6107 11.6814 7.49525C11.7943 7.3798 11.8694 7.22938 11.896 7.06579C11.9602 6.71343 11.995 6.35579 12 5.997C12.0001 5.61855 11.9666 5.24092 11.9 4.86906C11.873 4.70908 11.7989 4.56215 11.6884 4.44916C11.5778 4.33616 11.4363 4.26284 11.284 4.23961ZM8 5.997C8 6.41476 7.8827 6.82314 7.66294 7.1705C7.44318 7.51786 7.13082 7.78859 6.76537 7.94846C6.39992 8.10833 5.99779 8.15016 5.60982 8.06866C5.22186 7.98716 4.8655 7.78598 4.58579 7.49058C4.30609 7.19518 4.11561 6.81881 4.03843 6.40908C3.96126 5.99934 4.00087 5.57464 4.15225 5.18868C4.30362 4.80271 4.55997 4.47283 4.88886 4.24073C5.21776 4.00863 5.60444 3.88475 6 3.88475C6.53044 3.88475 7.03914 4.10729 7.41422 4.50342C7.78929 4.89954 8 5.4368 8 5.997Z"
+                                  />
+                                </svg>
+                              </a>
+                            </div>
                           </div>
 
-                          <div class="card-new__footer">
+                          <div class="card__footer">
                             <!-- Нижня часть карточки с текстом -->
-                            <div class="card-new__info">
-                              <h3 class="card__title">
-                                Новый
-                              </h3>
-                              <p class="card__subtitle">
-                                Добавить новую карточку в категорию
-                              </p>
+                            <div class="card__info">
+                              <div class="info__wrapper">
+                                <h3 class="card__title">Локация Локация</h3>
+                                <label class="card__custom-checkbox">
+                                  <input class="card__checkbox" type="checkbox" name="card" />
+                                  <span></span>
+                                </label>
+                                <div class="card__checked"></div>
+                              </div>
+                              <p class="card__subtitle">Локация Локация Локация</p>
+                            </div>
+                            <div class="card__download">
+                              <a class="download-button" href="">
+                                <svg
+                                  class="download-button__icon"
+                                  width="15"
+                                  height="15"
+                                  viewBox="0 0 15 15"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M0 14.0625C0 14.5803 0.419736 15 0.9375 15H14.0625C14.5803 15 15 14.5803 15 14.0625C15 13.5447 14.5803 13.125 14.0625 13.125H0.9375C0.419736 13.125 0 13.5447 0 14.0625ZM8.1629 11.0926C7.97982 11.2757 7.73994 11.3672 7.5 11.3672C7.26012 11.3672 7.02012 11.2757 6.8371 11.0926L3.51548 7.77103C3.14935 7.4049 3.14935 6.81132 3.51548 6.4452C3.8816 6.07907 4.47519 6.07907 4.84131 6.4452L6.5625 8.16639V0.9375C6.5625 0.419736 6.98224 0 7.5 0C8.01776 0 8.4375 0.419736 8.4375 0.9375V8.16639L10.1587 6.4452C10.5248 6.07907 11.1184 6.07907 11.4845 6.4452C11.8506 6.81132 11.8506 7.4049 11.4845 7.77103L8.1629 11.0926Z"
+                                  />
+                                </svg>
+                                <!-- <img class="download-button__image" src="img/cards/downArrow.svg" alt="Download" /> -->
+                              </a>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </a>
-                  </li>
-                  <!-- ------------------------------- -->
+                    </li>
+                    <!-- ------------------------------- -->
 
-                  <!-- ------------------------------- -->
-                  <li class="grid__item">
-                    <!-- Карточка -->
-                    <div class="card">
-                      <div class="card__container">
-                        <div class="card__image">
-                          <img width="265" src="img/cards/card_img_alexeevska.jpg" alt="ст. м. Алексеевская" />
-                          <div class="settings">
-                            <a class="settings__link" href="">
-                              <svg class="settings__img" width="12" height="12" viewBox="0 0 12 12"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                  d="M11.284 4.23961C11.0506 4.2038 10.8278 4.11285 10.6323 3.97352C10.4368 3.83419 10.2736 3.65007 10.1548 3.43488C10.036 3.21969 9.96472 2.97897 9.94622 2.73065C9.92773 2.48232 9.96252 2.23279 10.048 2.00063C10.1023 1.84886 10.1103 1.68293 10.0709 1.5261C10.0314 1.36928 9.94651 1.22943 9.828 1.12616C9.30481 0.662169 8.7093 0.297671 8.068 0.048915C7.92197 -0.0083763 7.76254 -0.0155344 7.61244 0.0284604C7.46233 0.0724552 7.32919 0.165359 7.232 0.293936C7.08571 0.491495 6.89875 0.651279 6.68529 0.761169C6.47183 0.871059 6.23747 0.92817 6 0.92817C5.76253 0.92817 5.52818 0.871059 5.31472 0.761169C5.10126 0.651279 4.91429 0.491495 4.76801 0.293936C4.67081 0.165359 4.53768 0.0724552 4.38757 0.0284604C4.23746 -0.0155344 4.07804 -0.0083763 3.93201 0.048915C3.33987 0.278576 2.78624 0.606579 2.29201 1.02055C2.16742 1.12471 2.07769 1.26826 2.03594 1.43018C1.9942 1.59209 2.00263 1.76387 2.06001 1.92036C2.15231 2.15866 2.19044 2.41649 2.17136 2.67317C2.15227 2.92984 2.07648 3.17822 1.95009 3.39838C1.82369 3.61854 1.6502 3.80435 1.44352 3.9409C1.23685 4.07745 1.00275 4.16095 0.760008 4.18469C0.602411 4.20249 0.454389 4.27325 0.337733 4.38657C0.221077 4.49989 0.141953 4.64977 0.112009 4.81414C0.0375277 5.20351 8.65615e-06 5.59976 8.65615e-06 5.997C-0.000538781 6.32956 0.0248807 6.6616 0.0760086 6.98975C0.101455 7.1594 0.179107 7.31546 0.29696 7.43382C0.414814 7.55218 0.566304 7.62624 0.728008 7.64455C0.976086 7.66914 1.21498 7.75612 1.42469 7.89823C1.6344 8.04034 1.80883 8.23343 1.93338 8.46135C2.05793 8.68927 2.12897 8.94538 2.14056 9.20825C2.15216 9.47111 2.10396 9.73309 2.00001 9.97224C1.93198 10.1278 1.9151 10.3029 1.95206 10.4698C1.98902 10.6366 2.0777 10.7856 2.20401 10.8932C2.72405 11.3487 3.31384 11.7073 3.94801 11.9535C4.0291 11.9832 4.11419 11.9989 4.20001 12C4.31767 11.9997 4.43357 11.9697 4.53796 11.9123C4.64236 11.855 4.73222 11.7721 4.80001 11.6705C4.94257 11.4511 5.13368 11.2718 5.35674 11.1481C5.5798 11.0245 5.82807 10.9601 6.08 10.9608C6.32411 10.9611 6.56476 11.0216 6.78281 11.1375C7.00087 11.2534 7.19029 11.4214 7.336 11.6282C7.43293 11.7658 7.57022 11.8657 7.72649 11.9123C7.88276 11.9589 8.04924 11.9497 8.2 11.8859C8.77988 11.6395 9.31972 11.2988 9.8 10.8763C9.92065 10.7709 10.0066 10.6279 10.0454 10.4677C10.0842 10.3076 10.0739 10.1385 10.016 9.98492C9.92192 9.74969 9.8809 9.49459 9.89618 9.23974C9.91145 8.9849 9.98261 8.7373 10.104 8.51648C10.2254 8.29566 10.3938 8.10767 10.5958 7.96734C10.7978 7.82702 11.0279 7.73821 11.268 7.70792C11.4237 7.68518 11.5685 7.6107 11.6814 7.49525C11.7943 7.3798 11.8694 7.22938 11.896 7.06579C11.9602 6.71343 11.995 6.35579 12 5.997C12.0001 5.61855 11.9666 5.24092 11.9 4.86906C11.873 4.70908 11.7989 4.56215 11.6884 4.44916C11.5778 4.33616 11.4363 4.26284 11.284 4.23961ZM8 5.997C8 6.41476 7.8827 6.82314 7.66294 7.1705C7.44318 7.51786 7.13082 7.78859 6.76537 7.94846C6.39992 8.10833 5.99779 8.15016 5.60982 8.06866C5.22186 7.98716 4.8655 7.78598 4.58579 7.49058C4.30609 7.19518 4.11561 6.81881 4.03843 6.40908C3.96126 5.99934 4.00087 5.57464 4.15225 5.18868C4.30362 4.80271 4.55997 4.47283 4.88886 4.24073C5.21776 4.00863 5.60444 3.88475 6 3.88475C6.53044 3.88475 7.03914 4.10729 7.41422 4.50342C7.78929 4.89954 8 5.4368 8 5.997Z" />
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-
-                        <div class="card__footer">
-                          <!-- Нижня часть карточки с текстом -->
-                          <div class="card__info">
-                            <div class="info__wrapper">
-                              <h3 class="card__title">
-                                Локация Локация
-                              </h3>
-                              <label class="card__custom-checkbox">
-                                <input class="card__checkbox" type="checkbox" name="card" />
-                                <span></span>
-
-                              </label>
-                              <div class="card__checked"></div>
-                            </div>
-                            <p class="card__subtitle">
-                              Локация Локация Локация
-                            </p>
-                          </div>
-                          <div class="card__download">
-                            <a class="download-button" href="">
-                              <svg class="download-button__icon" width="15" height="15" viewBox="0 0 15 15"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                  d="M0 14.0625C0 14.5803 0.419736 15 0.9375 15H14.0625C14.5803 15 15 14.5803 15 14.0625C15 13.5447 14.5803 13.125 14.0625 13.125H0.9375C0.419736 13.125 0 13.5447 0 14.0625ZM8.1629 11.0926C7.97982 11.2757 7.73994 11.3672 7.5 11.3672C7.26012 11.3672 7.02012 11.2757 6.8371 11.0926L3.51548 7.77103C3.14935 7.4049 3.14935 6.81132 3.51548 6.4452C3.8816 6.07907 4.47519 6.07907 4.84131 6.4452L6.5625 8.16639V0.9375C6.5625 0.419736 6.98224 0 7.5 0C8.01776 0 8.4375 0.419736 8.4375 0.9375V8.16639L10.1587 6.4452C10.5248 6.07907 11.1184 6.07907 11.4845 6.4452C11.8506 6.81132 11.8506 7.4049 11.4845 7.77103L8.1629 11.0926Z" />
-                              </svg>
-                              <!-- <img class="download-button__image" src="img/cards/downArrow.svg" alt="Download" /> -->
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <!-- ------------------------------- -->
-
-                  <!-- ------------------------------- -->
-                  <li class="grid__item">
-                    <!-- Карточка -->
-                    <div class="card card-selected">
-                      <div class="card__container">
-                        <div class="card__image">
-                          <img width="265" src="img/cards/card_img_alexeevska.jpg" alt="ст. м. Алексеевская" />
-                          <div class="settings">
-                            <a class="settings__link" href="">
-                              <svg class="settings__img" width="12" height="12" viewBox="0 0 12 12"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                  d="M11.284 4.23961C11.0506 4.2038 10.8278 4.11285 10.6323 3.97352C10.4368 3.83419 10.2736 3.65007 10.1548 3.43488C10.036 3.21969 9.96472 2.97897 9.94622 2.73065C9.92773 2.48232 9.96252 2.23279 10.048 2.00063C10.1023 1.84886 10.1103 1.68293 10.0709 1.5261C10.0314 1.36928 9.94651 1.22943 9.828 1.12616C9.30481 0.662169 8.7093 0.297671 8.068 0.048915C7.92197 -0.0083763 7.76254 -0.0155344 7.61244 0.0284604C7.46233 0.0724552 7.32919 0.165359 7.232 0.293936C7.08571 0.491495 6.89875 0.651279 6.68529 0.761169C6.47183 0.871059 6.23747 0.92817 6 0.92817C5.76253 0.92817 5.52818 0.871059 5.31472 0.761169C5.10126 0.651279 4.91429 0.491495 4.76801 0.293936C4.67081 0.165359 4.53768 0.0724552 4.38757 0.0284604C4.23746 -0.0155344 4.07804 -0.0083763 3.93201 0.048915C3.33987 0.278576 2.78624 0.606579 2.29201 1.02055C2.16742 1.12471 2.07769 1.26826 2.03594 1.43018C1.9942 1.59209 2.00263 1.76387 2.06001 1.92036C2.15231 2.15866 2.19044 2.41649 2.17136 2.67317C2.15227 2.92984 2.07648 3.17822 1.95009 3.39838C1.82369 3.61854 1.6502 3.80435 1.44352 3.9409C1.23685 4.07745 1.00275 4.16095 0.760008 4.18469C0.602411 4.20249 0.454389 4.27325 0.337733 4.38657C0.221077 4.49989 0.141953 4.64977 0.112009 4.81414C0.0375277 5.20351 8.65615e-06 5.59976 8.65615e-06 5.997C-0.000538781 6.32956 0.0248807 6.6616 0.0760086 6.98975C0.101455 7.1594 0.179107 7.31546 0.29696 7.43382C0.414814 7.55218 0.566304 7.62624 0.728008 7.64455C0.976086 7.66914 1.21498 7.75612 1.42469 7.89823C1.6344 8.04034 1.80883 8.23343 1.93338 8.46135C2.05793 8.68927 2.12897 8.94538 2.14056 9.20825C2.15216 9.47111 2.10396 9.73309 2.00001 9.97224C1.93198 10.1278 1.9151 10.3029 1.95206 10.4698C1.98902 10.6366 2.0777 10.7856 2.20401 10.8932C2.72405 11.3487 3.31384 11.7073 3.94801 11.9535C4.0291 11.9832 4.11419 11.9989 4.20001 12C4.31767 11.9997 4.43357 11.9697 4.53796 11.9123C4.64236 11.855 4.73222 11.7721 4.80001 11.6705C4.94257 11.4511 5.13368 11.2718 5.35674 11.1481C5.5798 11.0245 5.82807 10.9601 6.08 10.9608C6.32411 10.9611 6.56476 11.0216 6.78281 11.1375C7.00087 11.2534 7.19029 11.4214 7.336 11.6282C7.43293 11.7658 7.57022 11.8657 7.72649 11.9123C7.88276 11.9589 8.04924 11.9497 8.2 11.8859C8.77988 11.6395 9.31972 11.2988 9.8 10.8763C9.92065 10.7709 10.0066 10.6279 10.0454 10.4677C10.0842 10.3076 10.0739 10.1385 10.016 9.98492C9.92192 9.74969 9.8809 9.49459 9.89618 9.23974C9.91145 8.9849 9.98261 8.7373 10.104 8.51648C10.2254 8.29566 10.3938 8.10767 10.5958 7.96734C10.7978 7.82702 11.0279 7.73821 11.268 7.70792C11.4237 7.68518 11.5685 7.6107 11.6814 7.49525C11.7943 7.3798 11.8694 7.22938 11.896 7.06579C11.9602 6.71343 11.995 6.35579 12 5.997C12.0001 5.61855 11.9666 5.24092 11.9 4.86906C11.873 4.70908 11.7989 4.56215 11.6884 4.44916C11.5778 4.33616 11.4363 4.26284 11.284 4.23961ZM8 5.997C8 6.41476 7.8827 6.82314 7.66294 7.1705C7.44318 7.51786 7.13082 7.78859 6.76537 7.94846C6.39992 8.10833 5.99779 8.15016 5.60982 8.06866C5.22186 7.98716 4.8655 7.78598 4.58579 7.49058C4.30609 7.19518 4.11561 6.81881 4.03843 6.40908C3.96126 5.99934 4.00087 5.57464 4.15225 5.18868C4.30362 4.80271 4.55997 4.47283 4.88886 4.24073C5.21776 4.00863 5.60444 3.88475 6 3.88475C6.53044 3.88475 7.03914 4.10729 7.41422 4.50342C7.78929 4.89954 8 5.4368 8 5.997Z" />
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-
-                        <div class="card__footer">
-                          <!-- Нижня часть карточки с текстом -->
-                          <div class="card__info">
-                            <div class="info__wrapper">
-                              <h3 class="card__title">
-                                Локация Локация
-                              </h3>
-                              <label class="card__custom-checkbox">
-                                <input class="card__checkbox" type="checkbox" name="card" checked />
-                                <span></span>
-
-                              </label>
-                              <div class="card__checked"></div>
-                            </div>
-                            <p class="card__subtitle">
-                              Локация Локация Локация
-                            </p>
-                          </div>
-                          <div class="card__download">
-                            <a class="download-button" href="">
-                              <svg class="download-button__icon" width="15" height="15" viewBox="0 0 15 15"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                  d="M0 14.0625C0 14.5803 0.419736 15 0.9375 15H14.0625C14.5803 15 15 14.5803 15 14.0625C15 13.5447 14.5803 13.125 14.0625 13.125H0.9375C0.419736 13.125 0 13.5447 0 14.0625ZM8.1629 11.0926C7.97982 11.2757 7.73994 11.3672 7.5 11.3672C7.26012 11.3672 7.02012 11.2757 6.8371 11.0926L3.51548 7.77103C3.14935 7.4049 3.14935 6.81132 3.51548 6.4452C3.8816 6.07907 4.47519 6.07907 4.84131 6.4452L6.5625 8.16639V0.9375C6.5625 0.419736 6.98224 0 7.5 0C8.01776 0 8.4375 0.419736 8.4375 0.9375V8.16639L10.1587 6.4452C10.5248 6.07907 11.1184 6.07907 11.4845 6.4452C11.8506 6.81132 11.8506 7.4049 11.4845 7.77103L8.1629 11.0926Z" />
-                              </svg>
-                              <!-- <img class="download-button__image" src="img/cards/downArrow.svg" alt="Download" /> -->
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <!-- ------------------------------- -->
-
-                </ul>
-              </li>
-
-              <!-- Харьковское метро. Переходы -->
-              <li class="location__item">
-                <h2 class="location__title title" id="perehodi">Переходы</h2>
-                <ul class="location__grid grid">
-
-                  <!-- ------------------------------- -->
-                  <li class="grid__item">
-                    <!-- Новая карточка -->
-                    <a class="card-new card" href="">
-
-                      <div class="card__content">
+                    <!-- ------------------------------- -->
+                    <li class="grid__item">
+                      <!-- Карточка -->
+                      <div class="card card-selected">
                         <div class="card__container">
-                          <div class="card-new__image">
-                            <img width="265" src="./img/cards/add-new.svg" />
+                          <div class="card__image">
+                            <img
+                              width="265"
+                              src="img/cards/card_img_alexeevska.jpg"
+                              alt="ст. м. Алексеевская"
+                            />
+                            <div class="settings">
+                              <a class="settings__link" href="">
+                                <svg
+                                  class="settings__img"
+                                  width="12"
+                                  height="12"
+                                  viewBox="0 0 12 12"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M11.284 4.23961C11.0506 4.2038 10.8278 4.11285 10.6323 3.97352C10.4368 3.83419 10.2736 3.65007 10.1548 3.43488C10.036 3.21969 9.96472 2.97897 9.94622 2.73065C9.92773 2.48232 9.96252 2.23279 10.048 2.00063C10.1023 1.84886 10.1103 1.68293 10.0709 1.5261C10.0314 1.36928 9.94651 1.22943 9.828 1.12616C9.30481 0.662169 8.7093 0.297671 8.068 0.048915C7.92197 -0.0083763 7.76254 -0.0155344 7.61244 0.0284604C7.46233 0.0724552 7.32919 0.165359 7.232 0.293936C7.08571 0.491495 6.89875 0.651279 6.68529 0.761169C6.47183 0.871059 6.23747 0.92817 6 0.92817C5.76253 0.92817 5.52818 0.871059 5.31472 0.761169C5.10126 0.651279 4.91429 0.491495 4.76801 0.293936C4.67081 0.165359 4.53768 0.0724552 4.38757 0.0284604C4.23746 -0.0155344 4.07804 -0.0083763 3.93201 0.048915C3.33987 0.278576 2.78624 0.606579 2.29201 1.02055C2.16742 1.12471 2.07769 1.26826 2.03594 1.43018C1.9942 1.59209 2.00263 1.76387 2.06001 1.92036C2.15231 2.15866 2.19044 2.41649 2.17136 2.67317C2.15227 2.92984 2.07648 3.17822 1.95009 3.39838C1.82369 3.61854 1.6502 3.80435 1.44352 3.9409C1.23685 4.07745 1.00275 4.16095 0.760008 4.18469C0.602411 4.20249 0.454389 4.27325 0.337733 4.38657C0.221077 4.49989 0.141953 4.64977 0.112009 4.81414C0.0375277 5.20351 8.65615e-06 5.59976 8.65615e-06 5.997C-0.000538781 6.32956 0.0248807 6.6616 0.0760086 6.98975C0.101455 7.1594 0.179107 7.31546 0.29696 7.43382C0.414814 7.55218 0.566304 7.62624 0.728008 7.64455C0.976086 7.66914 1.21498 7.75612 1.42469 7.89823C1.6344 8.04034 1.80883 8.23343 1.93338 8.46135C2.05793 8.68927 2.12897 8.94538 2.14056 9.20825C2.15216 9.47111 2.10396 9.73309 2.00001 9.97224C1.93198 10.1278 1.9151 10.3029 1.95206 10.4698C1.98902 10.6366 2.0777 10.7856 2.20401 10.8932C2.72405 11.3487 3.31384 11.7073 3.94801 11.9535C4.0291 11.9832 4.11419 11.9989 4.20001 12C4.31767 11.9997 4.43357 11.9697 4.53796 11.9123C4.64236 11.855 4.73222 11.7721 4.80001 11.6705C4.94257 11.4511 5.13368 11.2718 5.35674 11.1481C5.5798 11.0245 5.82807 10.9601 6.08 10.9608C6.32411 10.9611 6.56476 11.0216 6.78281 11.1375C7.00087 11.2534 7.19029 11.4214 7.336 11.6282C7.43293 11.7658 7.57022 11.8657 7.72649 11.9123C7.88276 11.9589 8.04924 11.9497 8.2 11.8859C8.77988 11.6395 9.31972 11.2988 9.8 10.8763C9.92065 10.7709 10.0066 10.6279 10.0454 10.4677C10.0842 10.3076 10.0739 10.1385 10.016 9.98492C9.92192 9.74969 9.8809 9.49459 9.89618 9.23974C9.91145 8.9849 9.98261 8.7373 10.104 8.51648C10.2254 8.29566 10.3938 8.10767 10.5958 7.96734C10.7978 7.82702 11.0279 7.73821 11.268 7.70792C11.4237 7.68518 11.5685 7.6107 11.6814 7.49525C11.7943 7.3798 11.8694 7.22938 11.896 7.06579C11.9602 6.71343 11.995 6.35579 12 5.997C12.0001 5.61855 11.9666 5.24092 11.9 4.86906C11.873 4.70908 11.7989 4.56215 11.6884 4.44916C11.5778 4.33616 11.4363 4.26284 11.284 4.23961ZM8 5.997C8 6.41476 7.8827 6.82314 7.66294 7.1705C7.44318 7.51786 7.13082 7.78859 6.76537 7.94846C6.39992 8.10833 5.99779 8.15016 5.60982 8.06866C5.22186 7.98716 4.8655 7.78598 4.58579 7.49058C4.30609 7.19518 4.11561 6.81881 4.03843 6.40908C3.96126 5.99934 4.00087 5.57464 4.15225 5.18868C4.30362 4.80271 4.55997 4.47283 4.88886 4.24073C5.21776 4.00863 5.60444 3.88475 6 3.88475C6.53044 3.88475 7.03914 4.10729 7.41422 4.50342C7.78929 4.89954 8 5.4368 8 5.997Z"
+                                  />
+                                </svg>
+                              </a>
+                            </div>
                           </div>
 
-                          <div class="card-new__footer">
+                          <div class="card__footer">
                             <!-- Нижня часть карточки с текстом -->
-                            <div class="card-new__info">
-                              <h3 class="card__title">
-                                Новый
-                              </h3>
-                              <p class="card__subtitle">
-                                Добавить новую карточку в категорию
-                              </p>
+                            <div class="card__info">
+                              <div class="info__wrapper">
+                                <h3 class="card__title">Локация Локация</h3>
+                                <label class="card__custom-checkbox">
+                                  <input
+                                    class="card__checkbox"
+                                    type="checkbox"
+                                    name="card"
+                                    checked
+                                  />
+                                  <span></span>
+                                </label>
+                                <div class="card__checked"></div>
+                              </div>
+                              <p class="card__subtitle">Локация Локация Локация</p>
+                            </div>
+                            <div class="card__download">
+                              <a class="download-button" href="">
+                                <svg
+                                  class="download-button__icon"
+                                  width="15"
+                                  height="15"
+                                  viewBox="0 0 15 15"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M0 14.0625C0 14.5803 0.419736 15 0.9375 15H14.0625C14.5803 15 15 14.5803 15 14.0625C15 13.5447 14.5803 13.125 14.0625 13.125H0.9375C0.419736 13.125 0 13.5447 0 14.0625ZM8.1629 11.0926C7.97982 11.2757 7.73994 11.3672 7.5 11.3672C7.26012 11.3672 7.02012 11.2757 6.8371 11.0926L3.51548 7.77103C3.14935 7.4049 3.14935 6.81132 3.51548 6.4452C3.8816 6.07907 4.47519 6.07907 4.84131 6.4452L6.5625 8.16639V0.9375C6.5625 0.419736 6.98224 0 7.5 0C8.01776 0 8.4375 0.419736 8.4375 0.9375V8.16639L10.1587 6.4452C10.5248 6.07907 11.1184 6.07907 11.4845 6.4452C11.8506 6.81132 11.8506 7.4049 11.4845 7.77103L8.1629 11.0926Z"
+                                  />
+                                </svg>
+                                <!-- <img class="download-button__image" src="img/cards/downArrow.svg" alt="Download" /> -->
+                              </a>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </a>
-                  </li>
-                  <!-- ------------------------------- -->
+                    </li>
+                    <!-- ------------------------------- -->
+                  </ul>
+                </li>
 
-                </ul>
-              </li>
+                <!-- Харьковское метро. Переходы -->
+                <li class="location__item">
+                  <h2 class="location__title title" id="perehodi">Переходы</h2>
+                  <ul class="location__grid grid">
+                    <!-- ------------------------------- -->
+                    <li class="grid__item">
+                      <!-- Новая карточка -->
+                      <a class="card-new card" href="">
+                        <div class="card__content">
+                          <div class="card__container">
+                            <div class="card-new__image">
+                              <img width="265" src="./img/cards/add-new.svg" />
+                            </div>
 
-              <!-- Харьковское метро. Бэки -->
-              <li class="location__item">
-                <h2 class="location__title title" id="beki">Бэки</h2>
-                <ul class="location__grid grid">
-
-                  <!-- ------------------------------- -->
-                  <li class="grid__item">
-                    <!-- Новая карточка -->
-                    <a class="card-new card" href="">
-
-                      <div class="card__content">
-                        <div class="card__container">
-                          <div class="card-new__image">
-                            <img width="265" src="./img/cards/add-new.svg" />
-                          </div>
-
-                          <div class="card-new__footer">
-                            <!-- Нижня часть карточки с текстом -->
-                            <div class="card-new__info">
-                              <h3 class="card__title">
-                                Новый
-                              </h3>
-                              <p class="card__subtitle">
-                                Добавить новую карточку в категорию
-                              </p>
+                            <div class="card-new__footer">
+                              <!-- Нижня часть карточки с текстом -->
+                              <div class="card-new__info">
+                                <h3 class="card__title">Новый</h3>
+                                <p class="card__subtitle">Добавить новую карточку в категорию</p>
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </a>
-                  </li>
-                  <!-- ------------------------------- -->
+                      </a>
+                    </li>
+                    <!-- ------------------------------- -->
+                  </ul>
+                </li>
 
-                </ul>
-              </li>
+                <!-- Харьковское метро. Бэки -->
+                <li class="location__item">
+                  <h2 class="location__title title" id="beki">Бэки</h2>
+                  <ul class="location__grid grid">
+                    <!-- ------------------------------- -->
+                    <li class="grid__item">
+                      <!-- Новая карточка -->
+                      <a class="card-new card" href="">
+                        <div class="card__content">
+                          <div class="card__container">
+                            <div class="card-new__image">
+                              <img width="265" src="./img/cards/add-new.svg" />
+                            </div>
 
-              <!-- Харьковское метро. Другие -->
-              <li class="location__item">
-                <h2 class="location__title title" id="other">Другие</h2>
-                <ul class="location__grid grid">
-
-                  <!-- ------------------------------- -->
-                  <li class="grid__item">
-                    <!-- Новая карточка -->
-                    <a class="card-new card" href="">
-
-                      <div class="card__content">
-                        <div class="card__container">
-                          <div class="card-new__image">
-                            <img width="265" src="./img/cards/add-new.svg" />
-                          </div>
-
-                          <div class="card-new__footer">
-                            <!-- Нижня часть карточки с текстом -->
-                            <div class="card-new__info">
-                              <h3 class="card__title">
-                                Новый
-                              </h3>
-                              <p class="card__subtitle">
-                                Добавить новую карточку в категорию
-                              </p>
+                            <div class="card-new__footer">
+                              <!-- Нижня часть карточки с текстом -->
+                              <div class="card-new__info">
+                                <h3 class="card__title">Новый</h3>
+                                <p class="card__subtitle">Добавить новую карточку в категорию</p>
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </a>
-                  </li>
-                  <!-- ------------------------------- -->
+                      </a>
+                    </li>
+                    <!-- ------------------------------- -->
+                  </ul>
+                </li>
 
-                </ul>
-              </li>
+                <!-- Харьковское метро. Другие -->
+                <li class="location__item">
+                  <h2 class="location__title title" id="other">Другие</h2>
+                  <ul class="location__grid grid">
+                    <!-- ------------------------------- -->
+                    <li class="grid__item">
+                      <!-- Новая карточка -->
+                      <a class="card-new card" href="">
+                        <div class="card__content">
+                          <div class="card__container">
+                            <div class="card-new__image">
+                              <img width="265" src="./img/cards/add-new.svg" />
+                            </div>
 
+                            <div class="card-new__footer">
+                              <!-- Нижня часть карточки с текстом -->
+                              <div class="card-new__info">
+                                <h3 class="card__title">Новый</h3>
+                                <p class="card__subtitle">Добавить новую карточку в категорию</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <!-- ------------------------------- -->
+                  </ul>
+                </li>
+              </ul>
+            </section>
+          </main>
+        </div>
+        <!-- Правая секция -->
+        <div class="page-row__right">
+          <div class="right__content bg">
+            <div class="rotated">
+              <ul class="right-menu">
+                <li class="right-menu__item">
+                  <a href="#stations" class="right-menu__link right-menu__link--active">Экраны</a>
+                </li>
 
-            </ul>
-          </section>
-        </main>
-      </div>
-      <!-- Правая секция -->
-      <div class="page-row__right">
+                <li class="right-menu__item">
+                  <a href="#perehodi" class="right-menu__link">Фасады</a>
+                </li>
 
-        <div class="right__content bg">
+                <li class="right-menu__item">
+                  <a href="#beki" class="right-menu__link">ООН</a>
+                </li>
 
-          <div class="rotated">
-            <ul class="right-menu">
+                <li class="right-menu__item">
+                  <a href="#other" class="right-menu__link">Брендирования</a>
+                </li>
 
-              <li class="right-menu__item">
-                <a href="#stations" class="right-menu__link right-menu__link--active">Экраны</a>
-              </li>
-
-              <li class="right-menu__item">
-                <a href="#perehodi" class="right-menu__link">Фасады</a>
-              </li>
-
-              <li class="right-menu__item">
-                <a href="#beki" class="right-menu__link">ООН</a>
-              </li>
-
-              <li class="right-menu__item">
-                <a href="#other" class="right-menu__link">Брендирования</a>
-              </li>
-
-              <li class="right-menu__item">
-                <a href="#other" class="right-menu__link">Мосты</a>
-              </li>
-
-            </ul>
+                <li class="right-menu__item">
+                  <a href="#other" class="right-menu__link">Мосты</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <script src="./js/accordeon.js"></script>
-</body>
-
+    <script src="./js/accordion.js"></script>
+  </body>
 </html>

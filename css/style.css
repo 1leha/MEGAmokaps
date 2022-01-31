@@ -86,7 +86,7 @@ h6 {
 }
 
 :root {
-  --main-font: "Montserrat", sans-serif;
+  --main-font: 'Montserrat', sans-serif;
   --primary-color: #000;
   --secondary-color: #a0a0a0;
   --main-color: #fff;
@@ -94,6 +94,7 @@ h6 {
   --active-color: #e7f0ff;
   --active-btn-color: rgba(14, 28, 50, 0.1);
   --active-btn-color2: rgba(14, 28, 50, 0.1);
+  --current-color: currentColor;
 }
 
 body {
@@ -106,13 +107,22 @@ body {
   height: 100%;
 }
 
+.bg-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
 .bg {
-  background-color: var(--main-color);
-  background-image: url("./../img/bg/bigLogo_bg.svg");
-  background-repeat: no-repeat;
-  background-position: top right;
-  background-attachment: fixed;
-  z-index: 110;
+  position: fixed;
+  top: -147px;
+  right: -59px;
+  width: 865px;
+  height: 853px;
+  color: var(--active-btn-color);
 }
 
 .page-row {
@@ -166,6 +176,11 @@ body {
   margin-top: 42px;
 }
 
+.logo {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
 .search {
   width: 246px;
   height: 40px;
@@ -186,6 +201,7 @@ body {
   font-size: 16px;
   line-height: 2.5;
   background-color: transparent;
+  position: relative;
 }
 
 .search__text::-webkit-input-placeholder {
@@ -200,10 +216,7 @@ body {
   right: 18px;
   cursor: pointer;
   background-color: transparent;
-}
-
-.search__button::before {
-  content: url("./../img/leftside/lupa.svg");
+  color: var(--brand-color);
 }
 
 .item-center {
@@ -234,13 +247,13 @@ body {
   color: var(--main-color);
 }
 
-.accardeon__item {
+.accordion__item {
   margin-bottom: 25px;
   position: relative;
 }
 
-.accardeon__item::after {
-  content: "";
+.accordion__item::after {
+  content: '';
   display: inline-block;
   position: absolute;
   width: 191px;
@@ -250,103 +263,86 @@ body {
   background: linear-gradient(270deg, rgba(255, 255, 255, 0.1) -5.73%, rgba(255, 255, 255, 0) 97.39%);
 }
 
-.accardeon__item:last-child::after {
+.accordion__item:last-child::after {
   content: none;
 }
 
-.accardeon__item--active {
+.accordion__item--active {
   margin-bottom: 30px;
   position: relative;
 }
 
-.accardeon__item--active::after {
-  content: none;
-}
-
-.accardeon__item--active .accardeon__triger::before {
-  content: "";
-  top: 50%;
-  -webkit-transform: translate(-20px);
-          transform: translate(-20px);
-  -webkit-transform-origin: 50% 10%;
-          transform-origin: 50% 10%;
+.accordion__item--active .accordion__triger-icon {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-  -webkit-transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
 }
 
-.accardeon__item--active .accardeon__content {
+.accordion__item--active .accordion__content {
   display: block;
 }
 
-.accardeon__triger {
+.accordion__triger {
   cursor: pointer;
-  display: block;
-  padding: 0 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.25;
   position: relative;
 }
 
-.accardeon__triger::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 8px;
-  height: 5px;
-  background-image: url("./../img/leftside/arrow-down.svg");
-  background-repeat: no-repeat;
-  right: 8px;
-  top: 50%;
-  -webkit-transform-origin: 50% 10%;
-          transform-origin: 50% 10%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-  -webkit-transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
-}
-
-.accardeon__triger--active {
+.accordion__triger--active {
   display: block;
 }
 
-.accardeon__content {
+.accordion__triger-icon {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: ease 0.2s;
+  transition: ease 0.2s;
+}
+
+.accordion__content {
   padding: 0 8px;
   display: none;
 }
 
-.accardeon-submenu {
+.accordion-submenu {
   margin-top: 15px;
 }
 
-.accardeon-submenu__item:not(:last-child) {
+.accordion-submenu__item:not(:last-child) {
   margin-bottom: 7px;
 }
 
-.accardeon-submenu__item {
+.accordion-submenu__item {
   position: relative;
 }
 
-.accardeon-submenu__item--active::after {
-  content: "";
-  position: absolute;
-  width: 240px;
-  height: 28px;
-  background: linear-gradient(90.02deg, rgba(196, 196, 196, 0) 27.56%, rgba(196, 196, 196, 0.2) 102.5%), url("./../img/leftside/Ellipse1.svg"), url("./../img/leftside/Ellipse1.svg");
-  background-repeat: no-repeat;
-  top: -4px;
-  left: -32px;
-  background-position: 0 0, 211px 50%, 225px 50%;
-  background-size: 100%, 10px, 28px;
-}
-
-.accardeon-submenu__link {
+.accordion-submenu__link {
+  display: block;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
   color: var(--main-color);
+  position: relative;
+  outline: yellowgreen solid;
+}
+
+.accordion-submenu__rings {
+  outline: yellowgreen solid;
+  position: absolute;
+  top: 50%;
+  right: -53px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .button {
@@ -627,7 +623,7 @@ body {
 
 .card__custom-checkbox > input:checked + span:before {
   display: inline-block;
-  background-image: url("./../../img/cards/checked.svg");
+  background-image: url("./../img/cards/checked.svg");
   background-color: var(--brand-color);
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -809,7 +805,7 @@ body {
 
 .card-new {
   display: block;
-  color: inherit;
+  color: var(--brand-color);
 }
 
 .card-new__image {
@@ -829,4 +825,35 @@ body {
   border: solid 1px var(--active-btn-color);
   border-radius: 10px;
   overflow: hidden;
+}
+
+.box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.box .cheshuja {
+  width: 200px;
+  height: 200px;
+  background-color: #f1f1f1;
+  border: 1px solid #afafaf;
+  -webkit-transition-property: background-color, -webkit-transform;
+  transition-property: background-color, -webkit-transform;
+  transition-property: background-color, transform;
+  transition-property: background-color, transform, -webkit-transform;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.box .cheshuja:hover {
+  -webkit-transition-duration: .1s;
+          transition-duration: .1s;
+  -webkit-transform: perspective(100px) rotateY(2deg) translateX(-3px);
+          transform: perspective(100px) rotateY(2deg) translateX(-3px);
+  background-color: var(--brand-color);
 }

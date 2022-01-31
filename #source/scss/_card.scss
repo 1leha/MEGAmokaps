@@ -108,7 +108,7 @@
 
 		& > input:checked + span:before {
 			display: inline-block;
-			background-image: url("./../../img/cards/checked.svg");
+			background-image: url("./../img/cards/checked.svg");
 
 			background-color: var(--brand-color);
 			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -279,7 +279,7 @@
 
 .card-new {
 	display: block;
-	color: inherit;
+	color: var(--brand-color);
 
 	&__image {
 		display: flex;

@@ -1,0 +1,25 @@
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #ffffff;
+    // perspective: 10000px;
+
+    & .cheshuja {
+        width: 200px;
+        height: 200px;
+        background-color: #f1f1f1;
+        border: 1px solid rgb(175, 175, 175);
+        transition-property: background-color, transform;
+        transition-duration: 1s;
+
+
+        &:hover {
+            transition-duration: .1s;
+
+            transform: perspective(100px) rotateY(2deg) translateX(-3px);
+            background-color: var(--brand-color);
+
+        }
+    }
+}
