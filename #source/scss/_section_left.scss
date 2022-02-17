@@ -77,6 +77,7 @@
 .menu {
   // background-color: rgb(161, 144, 238);
   outline: burlywood 0px solid;
+  overflow: hidden;
 }
 
 .menu > .conteiner {
@@ -147,6 +148,8 @@
   }
 
   &__triger-icon {
+    position: absolute;
+    right: 8px;
     transform: rotate(0deg);
     transition: ease 0.2s;
     // background-color: rgba($color: #fff, $alpha: 0.2);
@@ -160,6 +163,7 @@
 
 .accordion-submenu {
   margin-top: 15px;
+  position: relative;
 
   &__item:not(:last-child) {
     margin-bottom: 7px;
@@ -167,6 +171,24 @@
 
   &__item {
     position: relative;
+    &--active {
+      &::after {
+        content: '';
+        position: absolute;
+        width: 240px;
+        height: 28px;
+        top: -4px;
+        left: 0;
+        background: linear-gradient(
+          90.02deg,
+          rgba(196, 196, 196, 0) 27.56%,
+          rgba(196, 196, 196, 0.2) 102.5%
+        );
+      }
+      .accordion-submenu__rings {
+        display: flex;
+      }
+    }
   }
 
   &__link {
@@ -176,28 +198,36 @@
     line-height: 1.25;
     color: var(--main-color);
     position: relative;
-    outline: yellowgreen solid;
+    // outline: yellowgreen solid;
   }
 
   &__rings {
-    outline: yellowgreen solid;
+    // outline: yellowgreen solid;
     position: absolute;
+    display: none;
+    align-items: center;
     top: 50%;
-    right: -53px;
+    right: -55px;
 
     transform: translateY(-50%);
   }
 
-  //   &__icon1 {
-  //     position: absolute;
-  //     top: 0;
-  //     right: 0;
-  //   }
+  &__icon1 {
+    position: absolute;
 
-  //   &__icon2 {
-  //     position: absolute;
-  //   }
+    left: -35px;
+  }
+
+  &__icon2 {
+    position: absolute;
+
+    left: -48px;
+    // transform: translateX(-70%);
+  }
 }
+// .accordion-submenu__item--active .accordion-submenu__rings {
+//   display: flex;
+// }
 
 .button {
   text-decoration: none;
